@@ -1,0 +1,43 @@
+<section class="section-interests">
+
+  <h3 id="interests">Interests</h3>
+
+  <div class="interests-mobile-nav">
+    {% for interest in site.data.settings.interests %}
+        <span class="interest-button {% if forloop.first %}active-interest{% endif %}"></span>
+    {% endfor %}
+  </div>
+
+  <div class="interests-belt">
+    {% for interest in site.data.settings.interests %}
+      <div class="interest-unit {% if forloop.first %}active-interest{% endif %}">
+
+        <figure class="interest-face">
+          <img src="{{ site.github.url }}/assets/img/interests/{{ interest.avatar }}" alt="interest-face">
+          <figcaption>
+            <strong class="interest-name">{{ interest.name }}</strong>
+            <em class="interest-title">{{ interest.title }}</em>
+          </figcaption>
+        </figure>
+
+        <div class="interest-content">
+          <div class="interest-quote-mark">{% include icons/icon-quote-mark.html %}</div>
+          {{ interest.quote }}
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+
+  <div class="interest-controls">
+    <div class="interest-control-next">{% include icons/icon-next.html %}</div>
+    <div class="interest-control-prev">{% include icons/icon-prev.html %}</div>
+  </div>
+
+  <div class="interests-logos">
+    {% for interest in site.data.settings.interests %}
+        <img class="interest-logo {% if forloop.first %}active-interest{% endif %}" src="{{ site.github.url }}/assets/img/interests/{{ interest.logo }}" align="{{ interest.logo }}">
+    {% endfor %}
+  </div>
+
+</section>
