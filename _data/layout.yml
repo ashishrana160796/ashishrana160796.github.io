@@ -1,0 +1,17 @@
+# Layout settings
+
+animation: "bounceOut"
+
+# Images
+
+hero: "hero-bg.jpg"
+avatar: "travitar.jpg"
+
+# Colors
+
+accent: "#333"
+
+textColor: "#777"
+headlineColor: "#333"
+bgcolor: "#e5eaee"
+documentBackgroundColor: "#fff"

@@ -1,0 +1,109 @@
+#-------------------------------
+# General Site Settings
+
+title: Ashish Rana
+description: Hardworking Logical Problem Solver
+email: ashishrana160796@gmail.com
+
+# NOTE: The Logo and Background image are defined in the all.sass document.
+
+menu:
+- {name: About Me, url: '#about-me'}
+- {name: Work, url: '#work'}
+- {name: Interests, url: '#interests'}
+- {name: Contact, url: '#contact'}
+
+#-------------------------------
+# SEO Section
+
+# NOTE: Providing SEO information will make this website more searchable on the internet.
+
+seo:
+  description: 'Personal website of Ashish Rana. With user-name ashishrana160796.'
+  rel-author: 'https://github.com/ashishrana160796'
+  rel-publisher: 'https://github.com/ashishrana160796'
+
+#-------------------------------
+# Google Analytics Section
+# Current Status : It is not being utilized only existing architecture is coded.
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+#google-analytics-ua: UA-XXXXXX-X
+
+#-------------------------------
+# About Section
+
+# NOTE: The avatar is defined in the all.sass document.
+
+blurb: >
+  **Ashish enjoys learning and practically applying** concepts with an efficient approach.
+  Mostly he spends his time contributing to [open source](https://github.com/ashishrana160796){:target="_blank"},
+  also enjoys working on latest technologies. Currently he is working on Java type-sytems, Software Engineering, AI, ML and DeepLearning. For pastime, he loves travelling, movies, & spotify.
+
+
+skills:
+- {name: Programming, value: '9'}
+- {name: Software Engineering, value: '8'}
+- {name: Artificial Intelligence, value: '8'}
+- {name: Machine Learning, value: '8'}
+- {name: Design and Planning, value: '8'}
+- {name: Learning, value: '10'}
+- {name: Communication, value: '7'}
+- {name: Graphic Design, value: '7'}
+
+#-------------------------------
+# Work Section
+
+projects:
+- {name: Checker Framework, folder: 'proj-1', file: 'work/proj-1.html'}
+- {name: Optimization Algorithm GUI, folder: 'proj-2', file: 'work/proj-2.html'}
+- {name: Aimacode, folder: 'proj-3', file: 'work/proj-3.html'}
+- {name: NLP Chatbot, folder: 'proj-4', file: 'work/proj-4.html'}
+- {name: Treasurehunt Application Game, folder: 'proj-5', file: 'work/proj-5.html'}
+- {name: Schelling Model Simulation, folder: 'proj-6', file: 'work/proj-6.html'}
+- {name: Screen Search, folder: 'proj-7', file: 'work/proj-7.html'}
+- {name: PixelPlay Color Code Exporter, folder: 'proj-8', file: 'work/proj-8.html'}
+
+
+
+#-------------------------------
+# interests Section
+
+interests:
+- {avatar: 'java.png',
+  name: 'Java Programming',
+  title: 'Type Systems, Code Verification, Programming',
+  quote: '<p><strong>Type systems, android and competitive coding</strong> are the working areas that I am currently working on. I have contributed to Checker Framework, Aimacode-Java(<i>issue raised</i>). Also, have created basic protoype of Determinism Checker and a Comparitive Analysis Gui for optimization algorithms.</p> ',
+  logo: 'logo1.png'}
+- {avatar: 'ai.png',
+  name: 'Artificial Intelligence',
+  title: 'Search Algorithms, Planning Problems',
+  quote: '<p><strong>Holds in depth knowledge of search algorithms.</strong> Along with aware with topics like knowledge representation, predicate logic, game theory, utility theory and in hand experience with Lisp and Prolog. Also, have contributed aimacode-pseudocode</p>',
+  logo: 'logo2.png'}
+- {avatar: 'ml.png',
+  name: 'Machine Learning',
+  title: 'Optimization Algorithms, Deep Learning',
+  quote: '<p><strong>Currently working with TensorFlow, Cuda and Deep Leaning models.</strong> Conceptually studied & Practically applied machine learning models and data analytics principles in <strong>R</strong>. Also, applied optimization algorithms in python and java. </p>',
+  logo: 'logo3.png'}
+- {avatar: 'socnet.png',
+  name: 'Social Networks',
+  title: 'Community Detection, Small World & Real Network Algorithms',
+  quote: '<p><strong>Worked with NetworkX & matplotlib libraries.</strong> Conceptually understood and practically applied concepts from newly emerging field of social networks. Decentralized search, real word graphs and page rank algorithm applied and studied thoretical properties of connected graphs. Achieved gold medal for this course taken via NPTEL Chapter.</p>',
+  logo: 'logo4.png'}
+
+
+#-------------------------------
+# Contact Section
+
+social:
+
+- {icon: 'facebook', link: 'https://www.facebook.com/ashishrana160796'}
+- {icon: 'github', link: 'https://github.com/ashishrana160796'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/ashishrana160796/'}
+- {icon: 'google-plus', link: 'hhttps://plus.google.com/+ASHISHRANA160796'}
+
+# social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
