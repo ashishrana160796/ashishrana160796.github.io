@@ -1,0 +1,156 @@
+.section-interests
+  position: relative
+
+.interests-belt
+  width: 100%
+  position: relative
+
+  .interest-unit
+    max-width: 750px
+    margin: 50px auto
+    position: relative
+    z-index: 1
+    display: none
+
+    &.active-interest
+      +display(flex)
+      @extend %#{$animation}
+
+    .interest-face
+      min-width: 180px
+      text-align: center
+
+      img
+        max-width: 100px
+        border-radius: 50%
+
+
+      .interest-name
+        display: block
+        text-transform: uppercase
+        font-weight: 400
+        letter-spacing: 1px
+
+      .interest-title
+        font-style: normal
+        font-size: 12px
+        color: #999
+
+    .interest-content
+      font-size: 18px
+      line-height: 36px
+      font-weight: 300
+      margin-top: -10px
+      position: relative
+
+
+
+
+// Logos
+.interests-logos
+  position: relative
+  z-index: 3
+  max-width: 750px
+  margin: 0px auto 100px
+  +display(flex)
+  +align-items(flex-end)
+  +justify-content(space-around)
+
+
+  .interest-logo
+    cursor: pointer
+    margin: 0 20px 20px
+    padding-bottom: 20px
+    border-bottom: 4px solid transparent
+    opacity: 0.5
+
+    &.active-interest
+      opacity: 1
+      border-bottom: 4px solid $accent
+
+
+.interest-quote-mark
+  +position(absolute, -18px null null -15px)
+  +size(60px)
+  z-index: -1
+  opacity: 0.3
+
+  path
+    fill: $accent
+
+
+
+// Controls
+.interest-controls
+  +position(absolute, 0px 0px 0px 0px)
+  z-index: 2
+
+  > div
+    +size(40px)
+    margin-top: -20px
+    cursor: pointer
+
+    path
+      fill: $accent
+
+  .interest-control-next
+    +position(absolute, 50% 10px null null)
+
+  .interest-control-prev
+    +position(absolute, 50% null null 10px)
+
+// interests-mobile-nav
+.interests-mobile-nav
+  text-align: center
+  position: relative
+  z-index: 3
+  display: none
+
+  span
+    display: inline-block
+    +size(16px)
+    border-radius: 50%
+    border: solid 2px $bgcolor
+    margin: 0px 10px
+    cursor: pointer
+
+    &.active-interest
+      border-color: $accent
+
+
+
+
+@media (max-width: 850px)
+  .interests-logos
+    +flex-wrap(wrap)
+
+  .interests-belt
+    overflow-x: hidden
+
+    .interest-unit.active-interest
+      display: block
+      position: relative
+      margin-left: auto
+      left: auto
+
+      .interest-face
+        margin-bottom: 30px
+
+      .interest-content
+        padding: 0px 30px
+        max-width: 400px
+        margin: 0px auto
+
+      .interest-quote-mark
+        left: 6px
+
+  .interests-logos
+    display: none
+
+  .interests-mobile-nav
+    display: block
+
+
+@media (max-width: 600px)
+  .interest-controls
+    display: none
