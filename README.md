@@ -1,4 +1,4 @@
-# This is personal website for human Ashish Rana.
+# This is personal website for human : Ashish Rana.
 
 ### Know his journey as a programmer through his projects and ideas.
 

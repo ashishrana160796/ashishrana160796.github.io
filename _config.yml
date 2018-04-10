@@ -1,2 +1,13 @@
-markdown: redcarpet
-exclude: ['README.md']
+# Build settings
+
+markdown: kramdown
+permalink: pretty
+
+port: 8000
+
+include: ['_includes/work']
+exclude: ['_site']
+
+sass:
+  sass_dir: assets/css
+  style: :nested
