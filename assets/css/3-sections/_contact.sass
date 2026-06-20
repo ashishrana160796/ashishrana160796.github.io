@@ -2,50 +2,58 @@
   text-align: center
 
 .social-links
-  max-width: 700px
+  max-width: 760px
   margin: 0px auto 50px
   +display(flex)
-  +justify-content(space-around)
+  +justify-content(center)
   +flex-wrap(wrap)
+  gap: 10px
 
   a
-    display: block
-    //background: $accent
-    border: 2px solid $accent
-    +size(50px)
-    line-height: 50px
-    color: $accent
-    border-radius: 50%
-    font-size: 28px
-    margin: 20px
-    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 46px
+    padding: 0 18px
+    border: 1px solid var(--line)
+    color: var(--ink)
+    border-radius: 999px
+    font-weight: 800
+    background: var(--page)
 
-
-    &:after
-      content: ''
-      display: block
-      +position(absolute, 0px 0px 0px 0px)
-      border: 2px solid $accent
-      border-radius: 50%
-      margin: -2px
-      opacity: 1
-      +transition()
-
-    &:hover:after
-      +transform(scale(1.5))
-      opacity: 0
+    &:hover, &:focus
+      border-color: var(--accent-soft)
+      color: var(--ink)
+      +transform(translateY(-1px))
 
 .bar
   width: 250px
   height: 0px
-  border-top: 4px solid $accent
+  border-top: 4px solid var(--accent)
   margin: 0px auto 50px
 
 .biglink
   display: inline-block
-  font:
-    size: 72px
-    weight: 300
-  line-height: 1
-  width: 90%
+  border: 0
+  border-bottom: 2px solid var(--line)
+  color: var(--ink)
+  background: transparent
+  font-size: 34px
+  font-weight: 300
+  line-height: 1.2
+  max-width: 90%
   margin: 0 auto
+  cursor: pointer
+
+  &:hover, &:focus
+    border-color: var(--accent-soft)
+    color: var(--accent-soft)
+
+.email-note
+  max-width: 560px
+  margin: 16px auto 0
+  color: var(--muted)
+
+@media (max-width: 620px)
+  .biglink
+    font-size: 23px

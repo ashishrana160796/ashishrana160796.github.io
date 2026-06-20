@@ -1,60 +1,166 @@
-header
-  @extend %background-image
-  background:
-    position: 30px 20px, 50% 50%
-    image: url(../img/#{$logo-path}), url(../img/#{$hero-path})
-  padding-bottom: 50px
+.site-hero
+  padding: 18px 24px 58px
+  background: linear-gradient(180deg, var(--surface) 0%, var(--page) 78%)
 
+.site-nav
+  max-width: 1180px
+  margin: 0 auto 36px
+  padding: 7px
+  +display(flex)
+  +justify-content(center)
+  +flex-wrap(wrap)
+  gap: 6px
+  border: 1px solid var(--line)
+  border-radius: 999px
+  background: rgba(255, 255, 255, 0.72)
+  box-shadow: 0 14px 42px rgba(20, 32, 43, 0.08)
+  backdrop-filter: blur(18px)
 
+  a
+    display: inline-flex
+    align-items: center
+    min-height: 40px
+    padding: 0 17px
+    border-radius: 999px
+    color: var(--muted)
+    font-weight: 700
 
-  nav
-    float: right
-    padding: 30px 30px 0 0
+    &:hover, &:focus
+      background: var(--surface)
+      color: var(--ink)
+
+html[data-theme="dark"] .site-nav
+  background: rgba(16, 20, 24, 0.74)
+
+.overview-strip
+  max-width: 1180px
+  margin: 0 auto 38px
+  +display(flex)
+  +align-items(center)
+  +justify-content(space-between)
+  gap: 18px
+  padding: 16px 20px
+  border: 1px solid rgba(91, 192, 190, 0.32)
+  border-radius: 8px
+  background: rgba(91, 192, 190, 0.08)
+  color: var(--ink)
+  backdrop-filter: blur(14px)
+
+  strong
+    font-size: 20px
+    color: var(--ink)
+    text-align: right
+    overflow-wrap: anywhere
+
+.overview-label
+  color: var(--accent-soft)
+  font-weight: 800
+  text-transform: uppercase
+  font-size: 12px
+
+.hero-grid
+  max-width: 1180px
+  margin: 0 auto
+  +display(grid)
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.56fr)
+  gap: 48px
+  +align-items(center)
+
+.hero-copy
+  max-width: 720px
+
+.hero-eyebrow
+  display: inline-flex
+  min-height: 38px
+  align-items: center
+  padding: 0 16px
+  border: 1px solid var(--line)
+  border-radius: 999px
+  color: var(--muted)
+  background: var(--page)
+  font-size: 13px
+  font-weight: 700
+
+.typing-line
+  min-height: 30px
+  color: var(--accent-soft)
+  font-weight: 700
+  font-size: 18px
+  margin-bottom: 18px
+
+  &:after
+    content: '|'
+    display: inline-block
+    margin-left: 3px
+    color: var(--accent-warm)
+
+.hero-headline
+  max-width: 680px
+  font-size: 26px
+  line-height: 1.38
+  color: var(--ink)
+  margin-bottom: 18px
+
+.hero-body
+  max-width: 720px
+  font-size: 17px
+
+.hero-actions
+  +display(flex)
+  +flex-wrap(wrap)
+  gap: 12px
+  margin-top: 32px
+
+.hero-portrait-wrap
+  justify-self: center
+  width: min(100%, 310px)
+  padding: 10px
+  border: 1px solid var(--line)
+  border-radius: 50%
+  background: var(--surface-strong)
+  box-shadow: var(--shadow)
+
+.hero-portrait
+  display: block
+  width: 100%
+  aspect-ratio: 1
+  object-fit: cover
+  object-position: center
+  border-radius: 50%
+
+@media (max-width: 900px)
+  .site-hero
+    padding-top: 84px
+    padding-bottom: 34px
+
+  .site-nav
+    margin-bottom: 26px
+    border-radius: 8px
+
+  .overview-strip
+    +align-items(flex-start)
+    +flex-direction(column)
+    margin-bottom: 32px
+
+    strong
+      text-align: left
+
+  .hero-grid
+    grid-template-columns: 1fr
+    gap: 28px
+
+  .hero-portrait-wrap
+    max-width: 280px
+    margin: 0 auto
+
+@media (max-width: 560px)
+  .site-nav
+    +justify-content(flex-start)
+    overflow-x: auto
+    flex-wrap: nowrap
 
     a
-      display: inline-block
-      margin-left: 20px
+      white-space: nowrap
 
-      color: rgba(255,255,255,1)
-      @extend %small-bold
-
-      &:hover
-        color: rgba(0,0,0,0.5)
-
-  h1
-    text-align: center
-    font:
-      size: 72px
-      weight: 700
-    color: white
-    text-transform: uppercase
-    letter-spacing: 0.05em
-    margin-bottom: 20px
-    clear: both
-    padding-top: 100px
-
-
-    span
-      display: inline-block
-      padding: 0.2em 0.5em
-      border: white solid 10px
-
-  .kicker
-    @extend %small-bold
-    text-align: center
-    letter-spacing: 0.05em
-    color: white
-    line-height: 1
-
-@media (max-width: 640px)
-  header
-    background:
-      position: 50% 20px, 50% 50%
-
-    nav
-      float: none
-      text-align: center
-      padding-top: 90px
-
-    h1
-      padding-top: 0px
+  .hero-headline
+    font-size: 21px

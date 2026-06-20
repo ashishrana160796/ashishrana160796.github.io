@@ -1,0 +1,150 @@
+.section-publications
+  overflow-x: hidden
+
+.publication-belt
+  width: 200%
+  position: relative
+  left: 0
+  +display(flex)
+  +transition(transform 560ms ease)
+
+  &.is-slided
+    +transform(translate3d(-50%, 0, 0))
+
+.publication-grid-wrap,
+.publication-detail-wrap
+  width: 50%
+  padding: 0 18px
+
+.publication-grid-wrap
+  max-width: none
+
+.publication-grid
+  max-width: 1040px
+  margin: 0 auto
+  +display(grid)
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+  border: 1px solid var(--line)
+  border-right: 0
+  border-bottom: 0
+
+.publication-card
+  position: relative
+  min-height: 210px
+  padding: 22px
+  border: 0
+  border-right: 1px solid var(--line)
+  border-bottom: 1px solid var(--line)
+  background: var(--page)
+  color: var(--ink)
+  text-align: left
+  cursor: pointer
+  overflow: hidden
+  +display(flex)
+  +flex-direction(column)
+  +justify-content(space-between)
+  +transition(background 180ms ease, color 180ms ease, transform 180ms ease)
+
+  &:nth-child(even)
+    background: var(--surface)
+
+  &:hover, &:focus
+    z-index: 2
+    background: var(--accent)
+    color: var(--page)
+    +transform(translateY(-2px))
+
+    em, .paper-year, .paper-status
+      color: var(--page)
+
+  strong
+    font-size: 18px
+    line-height: 1.28
+
+  em
+    color: var(--muted)
+    font-size: 13px
+
+.paper-year,
+.paper-status
+  color: var(--accent-soft)
+  font-size: 12px
+  font-weight: 800
+  text-transform: uppercase
+
+.earlier-publications
+  max-width: 1040px
+  margin: 24px auto 0
+
+  summary
+    display: inline-flex
+    min-height: 44px
+    align-items: center
+    padding: 0 18px
+    border: 1px solid var(--line)
+    border-radius: 999px
+    color: var(--ink)
+    background: var(--page)
+    cursor: pointer
+    font-weight: 800
+
+.publication-grid-earlier
+  margin-top: 18px
+
+.publication-detail
+  max-width: 760px
+  margin: 0 auto
+  position: relative
+  padding: 34px
+  border: 1px solid var(--line)
+  border-radius: 8px
+  background: var(--page)
+  box-shadow: var(--shadow)
+
+  &:focus
+    outline: none
+
+.publication-return
+  +position(absolute, 28px null null -58px)
+  +size(42px)
+  border: 1px solid var(--line)
+  border-radius: 50%
+  background: var(--page)
+  cursor: pointer
+
+  path
+    fill: var(--accent)
+
+.publication-panel
+  h4
+    margin: 6px 0 12px
+    font-size: 30px
+    line-height: 1.2
+
+.paper-authors
+  color: var(--ink)
+  font-weight: 700
+
+.paper-links
+  +display(flex)
+  +flex-wrap(wrap)
+  gap: 10px
+  margin-top: 24px
+
+@media (max-width: 900px)
+  .publication-grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+  .publication-return
+    position: static
+    margin-bottom: 18px
+
+@media (max-width: 620px)
+  .publication-grid
+    grid-template-columns: 1fr
+
+  .publication-card
+    min-height: 180px
+
+  .publication-detail
+    padding: 24px

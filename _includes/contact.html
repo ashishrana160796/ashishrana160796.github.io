@@ -1,16 +1,29 @@
-<section class="section-contact">
+<section id="contact" class="section-contact">
+  <h3>
+    <span data-lang-content="en">Contact</span>
+    <span data-lang-content="de">Kontakt</span>
+  </h3>
 
-  <h3 id="contact">Contact</h3>
-
+  <div class="section-intro">
+    <p data-lang-content="en">For research exchange, collaboration, invited talks, and engineering conversations.</p>
+    <p data-lang-content="de">Fuer Forschungsaustausch, Zusammenarbeit, Vortraege und Engineering-Gespraeche.</p>
+  </div>
 
   <div class="social-links">
-    {% for link in site.data.settings.social %}
-    <a href="{{ link.link }}" class="icon-{{ link.icon }}"></a>
-    {% endfor %}
+    <a href="{{ site.data.site.links.github }}" target="_blank" rel="noopener">GitHub</a>
+    <a href="{{ site.data.site.links.research_github }}" target="_blank" rel="noopener">arana-initiatives</a>
+    <a href="{{ site.data.site.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="{{ site.data.site.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
   </div>
 
   <hr class="bar">
 
-  <a class="biglink" href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
-
+  <button class="biglink email-copy"
+          type="button"
+          data-email-user="{{ site.data.site.email.user }}"
+          data-email-domain="{{ site.data.site.email.domain }}">
+    {{ site.data.site.email.display }}
+  </button>
+  <p class="email-note" data-lang-content="en">Click to copy the address. The visible form is routed privately through Netlify Forms.</p>
+  <p class="email-note" data-lang-content="de">Klicken, um die Adresse zu kopieren. Das Formular wird privat ueber Netlify Forms weitergeleitet.</p>
 </section>

@@ -1,0 +1,126 @@
+- id: oblivion
+  title: "Oblivion: Self-Adaptive Agentic Memory Control through Decay-Driven Activation"
+  authors: "Rana, A.; Hung, C.C.; Sun, Q.; Kunkel, J.M.; Lawrence, C."
+  year: 2026
+  venue: arXiv preprint
+  status_or_award: Pre-print available
+  summary_en: Built a cognitively inspired memory-control framework that casts forgetting as decay-driven reductions in accessibility, not explicit deletion.
+  summary_de: Entwicklung eines kognitiv inspirierten Frameworks zur Gedaechtnissteuerung, das Vergessen als zerfallsbedingte Verringerung der Zugaenglichkeit auffasst.
+  tags_en: [Agentic memory, Long-term memory, Memory management]
+  tags_de: [Agentisches Gedaechtnis, Langzeitgedaechtnis, Gedaechtnisverwaltung]
+  links:
+    - label: arXiv
+      url: https://arxiv.org/abs/2604.00131
+    - label: Project
+      url: https://nec-research.github.io/oblivion/
+  featured: true
+- id: prototype-healthcare
+  title: "Prototype-Based Learning for Healthcare: A Demonstration of Interpretable AI"
+  authors: "Rana, A.; Shaker, A.; Saralajew, S.; Suzuki, T.; Yasuda, K.; Kato, S.; Wada, T.; Fujikawa, T.; Kikutsuji, T."
+  year: 2025
+  venue: IEEE ICDM Workshops 2025, Demo Track
+  status_or_award: Best Demo Paper Award
+  summary_en: Built a state-of-the-art system for interpretable disease risk prediction and prototype-specific intervention corrections.
+  summary_de: Entwicklung eines Systems auf dem Stand der Technik fuer interpretierbare Krankheitsrisikoprognosen und prototypenspezifische Interventionskorrekturen.
+  tags_en: [Prototype-based learning, Interventions, Recommendations]
+  tags_de: [Prototypenbasiertes Lernen, Interventionen, Empfehlungen]
+  links:
+    - label: DOI
+      url: https://doi.org/10.1109/ICDMW69685.2025.00323
+    - label: arXiv
+      url: https://arxiv.org/abs/2601.02106
+  featured: true
+- id: robust-prototype-network
+  title: "A Robust Prototype-Based Network with Interpretable RBF Classifier Foundations"
+  authors: "Saralajew, S.; Rana, A.; Villmann, T.; Shaker, A."
+  year: 2025
+  venue: AAAI Conference on Artificial Intelligence
+  status_or_award: AAAI 2025
+  summary_en: Built deep Classification-by-Components architectures, interpretability analysis, and reproducibility toolkits.
+  summary_de: Entwicklung tiefer Classification-by-Components-Architekturen, umfassender Interpretierbarkeitsanalysen und reproduzierbarer Toolkits.
+  tags_en: [Classification-by-components, Prototype-based learning, Interpretability]
+  tags_de: [Classification-by-Components, Prototypenbasiertes Lernen, Interpretierbarkeit]
+  links:
+    - label: ENLAIGHT
+      url: https://github.com/nec-research/enlaight
+    - label: Code
+      url: https://github.com/si-cim/cbc-aaai-2025
+    - label: arXiv
+      url: https://arxiv.org/abs/2412.15499
+  featured: true
+- id: gov-rek
+  title: "GOV-REK: Governed Reward Engineering Kernels for Designing Robust Multi-Agent Reinforcement Learning Systems"
+  authors: "Rana, A.; Oesterle, M.; Brinkmann, J."
+  year: 2024
+  venue: AAMAS 2024
+  status_or_award: Extended abstract
+  summary_en: Used reward distribution priors and Hyperband to engineer sparse multi-agent rewards efficiently.
+  summary_de: Nutzung von Priors fuer Belohnungsverteilungen und Hyperband zur effizienten Entwicklung von Belohnungen in duenn belohnten Multi-Agenten-Systemen.
+  tags_en: [Multi-agent RL, Reward engineering, Hyperparameter optimization]
+  tags_de: [Multi-Agenten-RL, Reward Engineering, Hyperparameteroptimierung]
+  links:
+    - label: Code
+      url: https://github.com/arana-initiatives/gov-rek-marls
+    - label: arXiv
+      url: https://arxiv.org/abs/2404.01131
+  featured: true
+- id: levirank
+  title: "LeviRANK: Limited query expansion with voting integration for document retrieval and ranking"
+  authors: "Rana, A.; Golchha, P.; Juntunen, R.; Coaja, A.; Elzamarany, A.; Hung, C.C.; Ponzetto, S.P."
+  year: 2022
+  venue: Touché IR Workshop, CLEF 2022
+  status_or_award: CEUR Workshop Proceedings
+  summary_en: Built query relevance proportional retrieval and the Expando-Mono-Duo ranking pattern with T5 models.
+  summary_de: Entwicklung eines abfragerelevanzproportionalen Retrieval-Ansatzes und des Expando-Mono-Duo-Rankingmusters mit T5-Modellen.
+  tags_en: [BM25, Semantic retrieval, Relevance feedback]
+  tags_de: [BM25, Semantisches Retrieval, Relevanzfeedback]
+  links:
+    - label: Code
+      url: https://github.com/softgitron/LeviRank
+    - label: Paper
+      url: https://ceur-ws.org/Vol-3180/paper-259.pdf
+  featured: true
+- id: rerrfact
+  title: "RerrFact: Reduced Evidence Retrieval Representations for Scientific Claim Verification"
+  authors: "Rana, A.; Khanna, D.; Ghosal, T.; Singh, M.; Singh, H.; Rana, P.S."
+  year: 2022
+  venue: Scientific Document Understanding Workshop, AAAI 2022
+  status_or_award: CEUR Workshop Proceedings
+  summary_en: Redesigned multi-stage retrieval and classification modules with loosely coupled training for precision-oriented throughput.
+  summary_de: Neugestaltung mehrstufiger Retrieval- und Klassifikationsmodule mit lose gekoppeltem Training fuer praezisionsorientierten Durchsatz.
+  tags_en: [Scientific claim verification, Modular pipelines, Transformers]
+  tags_de: [Wissenschaftliche Claim-Verifikation, Modulare Pipelines, Transformer]
+  links:
+    - label: Code
+      url: https://github.com/RerrFact
+    - label: arXiv
+      url: https://arxiv.org/abs/2202.02646
+  featured: true
+- id: covid-prognosis
+  title: "Quantifying prognosis severity of COVID-19 patients from deep learning based analysis of CT chest images"
+  authors: "Rana, A.; Singh, H.; Mavuduru, R.; Pattanaik, S.; Rana, P.S."
+  year: 2022
+  venue: Multimedia Tools and Applications
+  status_or_award: MTAP Journal
+  summary_en: Designed a Single Shot Detector pipeline for COVID-19 prognosis severity estimation from CT slice datasets.
+  summary_de: Entwicklung einer Single-Shot-Detector-Pipeline zur Schaetzung des COVID-19-Schweregrads anhand von CT-Schichtbildern.
+  tags_en: [Single Shot Detector, Image similarity, Multiclass classification]
+  tags_de: [Single Shot Detector, Bildaehnlichkeit, Mehrklassenklassifikation]
+  links:
+    - label: DOI
+      url: https://doi.org/10.1007/s11042-022-12214-6
+  featured: false
+- id: safer-autonomous-agents
+  title: "Building safer autonomous agents by leveraging risky driving behavior knowledge"
+  authors: "Rana, A.; Malhi, A."
+  year: 2021
+  venue: CCCI 2021
+  status_or_award: Informatics Best Paper Award
+  summary_en: Estimated causal agent performance improvements by using collision scenario information with causal experiment design.
+  summary_de: Kausale Bewertung von Agentenleistungsverbesserungen durch Nutzung von Kollisionsszenarien in einem kausalen Versuchsdesign.
+  tags_en: [Deep reinforcement learning, Stochastic control, Causal experiments]
+  tags_de: [Deep Reinforcement Learning, Stochastische Regelung, Kausale Experimente]
+  links:
+    - label: IEEE
+      url: https://ieeexplore.ieee.org/document/9583209
+  featured: false

@@ -2,18 +2,18 @@
 ---
 
 <!DOCTYPE html>
-<html class="">
+<html class="" lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.data.settings.seo.description }}">
-  <meta rel="author" href="{{ site.data.settings.seo.rel-author }}">
-  <meta rel="publisher" href="{{ site.data.settings.seo.rel-publisher }}">
+  <meta name="description" content="{{ site.data.site.seo.description }}">
+  <meta rel="author" href="{{ site.data.site.links.github }}">
+  <meta rel="publisher" href="{{ site.data.site.links.github }}">
   
   <META http-equiv="refresh" content="2; URL=/">
   
-  <title>{{ site.data.settings.title }}</title>
+  <title>{{ site.data.site.title }}</title>
 
   <link rel="stylesheet" href="/assets/css/all.css">
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -23,15 +23,21 @@
 <body class="form-success">
 
 
-<h1>Form submitted successfully!</h1>
+{% include controls.html %}
 
-<p>Please wait while we return you to {{ site.data.settings.title }}</p>
+<main class="success-message">
+  <h1>
+    <span data-lang-content="en">Form submitted successfully!</span>
+    <span data-lang-content="de">Formular erfolgreich gesendet!</span>
+  </h1>
+
+  <p data-lang-content="en">Please wait while we return you to {{ site.data.site.title }}.</p>
+  <p data-lang-content="de">Bitte warten Sie, waehrend wir Sie zu {{ site.data.site.title }} zurueckbringen.</p>
+</main>
 
 
 
 
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="{{ site.github.url }}/assets/js/functions.js"></script>
+<script src="{{ site.github.url }}/assets/js/site.js"></script>
 </body>
 </html>

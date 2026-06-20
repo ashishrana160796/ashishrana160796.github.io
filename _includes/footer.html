@@ -4,12 +4,15 @@
 
     <div class="content-wrap">
       <nav>
-        {% for item in site.data.settings.menu %}
-          <a href="{{ item.url }}">{{ item.name }}</a>
+        {% for item in site.data.navigation %}
+          <a href="#{{ item.id }}">
+            <span data-lang-content="en">{{ item.label_en }}</span>
+            <span data-lang-content="de">{{ item.label_de }}</span>
+          </a>
         {% endfor %}
       </nav>
 
-      <p class="copyright">All content copyright {{ site.time | date: '%Y' }}</p>
+      <p class="copyright">© {{ site.time | date: '%Y' }} {{ site.data.site.title }}</p>
     </div>
 
   </div>

@@ -1,6 +1,7 @@
 # Cache house-keeping files omitted from git
 .sass-cache
+.bundle
+vendor/bundle
 
 # Not including site folder created by .jenkyll
 _site
-

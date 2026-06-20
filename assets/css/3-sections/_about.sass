@@ -1,110 +1,94 @@
-.face-lockup
-  max-width: 780px
+.section-about
+  h3
+    padding-top: 56px
+
+.research-lockup
+  max-width: 980px
+  margin: 0 auto 34px
   +display(flex)
-  margin: 0 auto
+  +justify-content(center)
+  +flex-wrap(wrap)
+  gap: 26px
+
+.research-orb
+  width: 220px
+  min-height: 150px
+  padding: 18px
+  +display(flex)
+  +flex-direction(column)
   +align-items(center)
-  +justify-content(space-between)
-
-  .face-img
-    border-radius: 50%
-    background-size: cover
-    background-position: center
-    background-image: url(../img/#{$avatar-path})
-    +size(200px)
-    +order(3)
-
-  [class^="icon-"]
-    +size(100px)
-    background: $bgcolor
-    border-radius: 50%
-
-    path
-      fill: $accent
-
-    &.icon-pencil
-      +order(1)
-    &.icon-mouse
-      +order(2)
-    &.icon-browser
-      +order(4)
-    &.icon-video
-      +order(5)
-
-@media screen and (max-width: 650px)
-  .face-lockup
-    display: block
-    text-align: center
-
-    div
-      display: inline-block
-
-    .face-img
-      display: block
-      background:
-        position: center center
-        repeat: no-repeat
-      margin: 0 auto 30px
-
-    [class^="icon-"]
-      margin: 10px 9%
-
-
-
-
-.blurb
-  max-width: 620px
-  padding: 0 20px
-  margin: 50px auto
-  font-size: 24px
+  +justify-content(center)
+  gap: 14px
+  border: 1px solid var(--line)
+  border-radius: 50%
+  background: var(--surface)
+  color: var(--ink)
   text-align: center
-  font-weight: 300
+  font-weight: 700
+  line-height: 1.32
+  overflow-wrap: anywhere
+  hyphens: auto
+  box-shadow: 0 14px 36px rgba(20, 32, 43, 0.07)
 
+  &:hover, &:focus
+    border-color: var(--accent-soft)
+    color: var(--ink)
+    +transform(translateY(-2px))
 
+.orb-icon
+  +display(flex)
+  +align-items(center)
+  +justify-content(center)
+  +size(42px)
+  border-radius: 50%
+  background: var(--accent)
+  color: var(--page)
 
-.skill-lockup
-  max-width: 540px
-  margin: 100px auto
-  color: #999
-  +clearfix
+.about-grid
+  max-width: 980px
+  margin: 0 auto
+  +display(grid)
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.8fr)
+  gap: 22px
 
+.about-panel
+  padding: 28px
+  border: 1px solid var(--line)
+  border-radius: 8px
+  background: var(--page)
 
-  .skill-unit
-    width: 270px
-    float: left
+  h4
+    margin: 0 0 14px
 
-  .skill-icons
-    font-size: 0
-    margin: 3px 0 30px
+.language-row
+  +display(grid)
+  grid-template-columns: 1fr auto
+  gap: 4px 14px
+  padding: 14px 0
+  border-bottom: 1px solid var(--line)
 
-    span
-      display: inline-block
-      +size(14px)
-      background-color: $accent
-      margin-right: 8px
-      border-radius: 50%
+  &:last-child
+    border-bottom: 0
 
-      &:after
-        content: ''
-        display: block
-        +size(10px)
-        background: #fff
-        border-radius: 50%
-        margin: 2px
+  span
+    color: var(--accent-soft)
+    font-weight: 800
 
-    @for $i from 1 through 10
-      &.skill-#{$i} span:nth-child(n+#{$i+1})
-        @extend %skill-color
+  em
+    grid-column: 1 / -1
+    color: var(--muted)
+    font-size: 13px
 
+@media screen and (max-width: 760px)
+  .section-about
+    h3
+      padding-top: 34px
 
-%skill-color
-  background: $bgcolor
+  .research-orb
+    width: 100%
+    min-height: 118px
+    border-radius: 8px
+    font-size: 13px
 
-
-
-
-@media screen and (max-width: 541px)
-  .skill-lockup
-    width: 220px
-
-    .skill-unit
-      width: 220px
+  .about-grid
+    grid-template-columns: 1fr

@@ -1,0 +1,43 @@
+<div class="experience-group">
+  <h4>{{ include.cv.experience.heading }}</h4>
+  <div class="timeline">
+    {% for role in include.cv.experience.roles %}
+      <article class="timeline-item {% if role.collapsible %}timeline-item-collapsible{% endif %}">
+        <div class="timeline-date">
+          <span>{{ role.period }}</span>
+          <em>{{ role.type }}</em>
+        </div>
+        {% if role.collapsible %}
+        <details class="timeline-body timeline-details">
+          <summary>
+            <span>
+              <strong>{{ role.title }}</strong>
+              <em>{{ role.organization }} · {{ role.location }}</em>
+            </span>
+          </summary>
+        {% else %}
+        <div class="timeline-body">
+          <h5>{{ role.title }}</h5>
+          <p class="timeline-org">{{ role.organization }} · {{ role.location }}</p>
+        {% endif %}
+          {% if role.points %}
+            <ul>
+              {% for point in role.points %}
+                <li>{{ point }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          <div class="tag-list">
+            {% for tag in role.tags %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% if role.collapsible %}
+        </details>
+        {% else %}
+        </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</div>

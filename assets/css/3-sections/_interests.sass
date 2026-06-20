@@ -6,7 +6,7 @@
   position: relative
 
   .interest-unit
-    max-width: 750px
+    max-width: 790px
     margin: 50px auto
     position: relative
     z-index: 1
@@ -17,113 +17,121 @@
       @extend %#{$animation}
 
     .interest-face
-      min-width: 180px
+      min-width: 220px
       text-align: center
 
-      img
-        max-width: 100px
+      .interest-symbol
+        +display(flex)
+        +align-items(center)
+        +justify-content(center)
+        +size(92px)
+        margin: 0 auto 18px
+        border: 1px solid var(--line)
         border-radius: 50%
-
+        background: var(--surface)
+        color: var(--accent-soft)
+        font-size: 28px
+        font-weight: 800
 
       .interest-name
         display: block
         text-transform: uppercase
-        font-weight: 400
-        letter-spacing: 1px
+        font-weight: 800
+        letter-spacing: 0
+        color: var(--ink)
 
       .interest-title
+        display: block
+        max-width: 220px
+        margin: 8px auto 0
         font-style: normal
         font-size: 12px
-        color: #999
+        color: var(--muted)
 
     .interest-content
       font-size: 18px
-      line-height: 36px
+      line-height: 34px
       font-weight: 300
-      margin-top: -10px
+      margin-top: 4px
       position: relative
+      color: var(--muted)
 
-
-
-
-// Logos
 .interests-logos
   position: relative
   z-index: 3
-  max-width: 750px
+  max-width: 900px
   margin: 0px auto 100px
   +display(flex)
   +align-items(flex-end)
-  +justify-content(space-around)
-
+  +justify-content(center)
+  +flex-wrap(wrap)
+  gap: 12px
 
   .interest-logo
     cursor: pointer
-    margin: 0 20px 20px
-    padding-bottom: 20px
-    border-bottom: 4px solid transparent
-    opacity: 0.5
+    min-height: 42px
+    padding: 0 16px
+    border: 1px solid var(--line)
+    border-radius: 999px
+    opacity: 0.72
+    color: var(--ink)
+    background: var(--page)
+    font-weight: 800
 
     &.active-interest
       opacity: 1
-      border-bottom: 4px solid $accent
-
+      border-color: var(--accent-soft)
+      color: var(--ink)
 
 .interest-quote-mark
   +position(absolute, -18px null null -15px)
   +size(60px)
   z-index: -1
-  opacity: 0.3
+  opacity: 0.2
 
   path
-    fill: $accent
+    fill: var(--accent)
 
-
-
-// Controls
 .interest-controls
   +position(absolute, 0px 0px 0px 0px)
   z-index: 2
 
-  > div
-    +size(40px)
+  > button
+    +size(42px)
     margin-top: -20px
+    border: 1px solid var(--line)
+    border-radius: 50%
+    background: var(--page)
     cursor: pointer
 
     path
-      fill: $accent
+      fill: var(--accent)
 
   .interest-control-next
-    +position(absolute, 50% 10px null null)
+    +position(absolute, 50% 20px null null)
 
   .interest-control-prev
-    +position(absolute, 50% null null 10px)
+    +position(absolute, 50% null null 20px)
 
-// interests-mobile-nav
 .interests-mobile-nav
   text-align: center
   position: relative
   z-index: 3
   display: none
 
-  span
+  button
     display: inline-block
     +size(16px)
     border-radius: 50%
-    border: solid 2px $bgcolor
+    border: solid 2px var(--line)
     margin: 0px 10px
     cursor: pointer
+    background: transparent
 
     &.active-interest
-      border-color: $accent
-
-
-
+      border-color: var(--accent)
 
 @media (max-width: 850px)
-  .interests-logos
-    +flex-wrap(wrap)
-
   .interests-belt
     overflow-x: hidden
 
@@ -138,7 +146,7 @@
 
       .interest-content
         padding: 0px 30px
-        max-width: 400px
+        max-width: 520px
         margin: 0px auto
 
       .interest-quote-mark
@@ -149,7 +157,6 @@
 
   .interests-mobile-nav
     display: block
-
 
 @media (max-width: 600px)
   .interest-controls

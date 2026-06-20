@@ -1,24 +1,38 @@
-<section>
+<section class="section-form">
 
-  <h3>Let's work together</h3>
+  <h3>
+    <span data-lang-content="en">Let's work together</span>
+    <span data-lang-content="de">Lassen Sie uns zusammenarbeiten</span>
+  </h3>
 
-<form method="POST" action="//formspree.io/{{ site.data.settings.email }}">
+<form name="collaboration"
+      method="POST"
+      action="{{ site.github.url }}/form-success/"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="collaboration">
+  <p class="hidden-field">
+    <label>Do not fill this out: <input name="bot-field"></label>
+  </p>
 
   <fieldset class="contact-info-group">
 
-    <label><span>Your Name</span>
+    <label><span data-lang-content="en">Your Name</span><span data-lang-content="de">Ihr Name</span>
     <input type="text" name="name"></label>
 
-    <label><span>Your Email</span>
+    <label><span data-lang-content="en">Your Email</span><span data-lang-content="de">Ihre E-Mail</span>
     <input type="email" name="_replyto"></label>
 
   </fieldset>
 
-  <label><span>Tell me about your project</span>
+  <label><span data-lang-content="en">Tell me about your project</span><span data-lang-content="de">Erzaehlen Sie mir von Ihrem Projekt</span>
   <textarea name="message"></textarea></label>
 
   <fieldset class="submit-wrap">
-    <input type="submit" value="Send">
+    <button type="submit" class="button button-primary">
+      <span data-lang-content="en">Send</span>
+      <span data-lang-content="de">Senden</span>
+    </button>
   </fieldset>
 
 </form>

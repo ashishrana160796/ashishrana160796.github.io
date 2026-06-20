@@ -1,0 +1,23 @@
+<article class="publication-panel" data-publication-panel="{{ include.paper.id }}" hidden>
+  <p class="paper-year">{{ include.paper.year }} · {{ include.paper.venue }}</p>
+  <h4>{{ include.paper.title }}</h4>
+  <p class="paper-authors">{{ include.paper.authors }}</p>
+  <p class="paper-status">{{ include.paper.status_or_award }}</p>
+  <p data-lang-content="en">{{ include.paper.summary_en }}</p>
+  <p data-lang-content="de">{{ include.paper.summary_de }}</p>
+  <div class="tag-list" data-lang-content="en">
+    {% for tag in include.paper.tags_en %}
+      <span>{{ tag }}</span>
+    {% endfor %}
+  </div>
+  <div class="tag-list" data-lang-content="de">
+    {% for tag in include.paper.tags_de %}
+      <span>{{ tag }}</span>
+    {% endfor %}
+  </div>
+  <div class="paper-links">
+    {% for link in include.paper.links %}
+      <a class="button button-secondary" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+    {% endfor %}
+  </div>
+</article>

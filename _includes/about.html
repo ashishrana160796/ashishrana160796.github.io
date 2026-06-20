@@ -1,42 +1,55 @@
-<section>
+{% assign cv_en = site.data.cven %}
+{% assign cv_de = site.data.cvde %}
 
-  <h3 id="about-me">About Myself</h3>
+<section id="about" class="section-about">
+  <h3>
+    <span data-lang-content="en">About</span>
+    <span data-lang-content="de">Profil</span>
+  </h3>
 
-  <div class="face-lockup">
-
-    <div class="face-img"></div>
-
-    <div class="icon-pencil">{% include icons/icon-pencil.html %}</div>
-    <div class="icon-mouse">{% include icons/icon-mouse.html %}</div>
-    <div class="icon-browser">{% include icons/icon-browser.html %}</div>
-    <div class="icon-video">{% include icons/icon-video.html %}</div>
-
-  </div>
-
-
-  <div class="blurb">
-    {{ site.data.settings.blurb | markdownify }}
-  </div>
-
-  {% if site.data.settings.skills %}
-
-  <div class="skill-lockup">
-
-    {% for skill in site.data.settings.skills %}
-
-      <div class="skill-unit">
-        <div class="skill-label">{{ skill.name }}</div>
-        <div class="skill-icons skill-{{ skill.value }}">
-          {% for i in (1..10) %}
-            <span></span>
-          {% endfor %}
-        </div>
-      </div>
-
+  <div class="face-lockup research-lockup">
+    {% for interest in cv_en.research_interests %}
+      <a class="research-orb" href="#interests" aria-label="{{ interest }}">
+        <span class="orb-icon">{{ forloop.index }}</span>
+        <span data-lang-content="en">{{ interest }}</span>
+        <span data-lang-content="de">{{ cv_de.research_interests[forloop.index0] }}</span>
+      </a>
     {% endfor %}
-
   </div>
 
-  {% endif %}
+  <div class="about-grid">
+    <div class="about-panel">
+      <h4>
+        <span data-lang-content="en">{{ cv_en.profile.heading }}</span>
+        <span data-lang-content="de">{{ cv_de.profile.heading }}</span>
+      </h4>
+      <p data-lang-content="en">{{ cv_en.profile.body }}</p>
+      <p data-lang-content="de">{{ cv_de.profile.body }}</p>
+    </div>
 
+    <div class="about-panel language-panel">
+      <h4>
+        <span data-lang-content="en">Languages</span>
+        <span data-lang-content="de">Sprachen</span>
+      </h4>
+      <div data-lang-content="en">
+        {% for language in cv_en.languages %}
+          <div class="language-row">
+            <strong>{{ language.name }}</strong>
+            <span>{{ language.level }}</span>
+            <em>{{ language.note }}</em>
+          </div>
+        {% endfor %}
+      </div>
+      <div data-lang-content="de">
+        {% for language in cv_de.languages %}
+          <div class="language-row">
+            <strong>{{ language.name }}</strong>
+            <span>{{ language.level }}</span>
+            <em>{{ language.note }}</em>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>

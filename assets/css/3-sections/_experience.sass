@@ -1,0 +1,107 @@
+.experience-group
+  max-width: 1040px
+  margin: 0 auto 34px
+
+  > h4, > summary
+    margin: 0 0 18px
+    color: var(--ink)
+    font-size: 20px
+    font-weight: 800
+
+.timeline
+  border-left: 2px solid var(--line)
+  margin-left: 160px
+
+.timeline-item
+  position: relative
+  padding: 0 0 30px 34px
+
+  &:before
+    content: ''
+    +position(absolute, 3px null null -7px)
+    +size(12px)
+    border-radius: 50%
+    background: var(--accent-soft)
+
+.timeline-date
+  +position(absolute, 0 null null -190px)
+  width: 140px
+  color: var(--muted)
+  font-size: 13px
+  font-weight: 800
+  text-align: right
+
+  em
+    display: block
+    margin-top: 4px
+    color: var(--accent-soft)
+    font-size: 11px
+    text-transform: uppercase
+
+.timeline-body
+  padding: 24px
+  border: 1px solid var(--line)
+  border-radius: 8px
+  background: var(--page)
+
+  h5
+    color: var(--ink)
+
+  ul
+    margin: 14px 0 16px
+    padding-left: 18px
+
+.timeline-details
+  padding: 0
+
+  summary
+    cursor: pointer
+    list-style: none
+    padding: 22px 24px
+
+    &::-webkit-details-marker
+      display: none
+
+    strong
+      display: block
+      color: var(--ink)
+      font-size: 17px
+
+    em
+      display: block
+      color: var(--muted)
+      margin-top: 4px
+
+  &[open] summary
+    border-bottom: 1px solid var(--line)
+
+  ul,
+  .tag-list
+    margin-left: 24px
+    margin-right: 24px
+
+  .tag-list
+    margin-bottom: 24px
+
+.timeline-org
+  color: var(--muted)
+  margin: 4px 0 0
+
+@media (max-width: 760px)
+  .timeline
+    margin-left: 0
+
+  .timeline-date
+    position: static
+    width: auto
+    text-align: left
+    margin: 0 0 8px 34px
+
+  .timeline-body
+    padding: 20px
+
+  .timeline-details
+    padding: 0
+
+    summary
+      padding: 18px 20px

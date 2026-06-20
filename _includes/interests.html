@@ -1,43 +1,56 @@
-<section class="section-interests">
+{% assign cv_en = site.data.cven %}
+{% assign cv_de = site.data.cvde %}
 
-  <h3 id="interests">Interests</h3>
+<section id="interests" class="section-interests">
+  <h3>
+    <span data-lang-content="en">Interests</span>
+    <span data-lang-content="de">Interessen</span>
+  </h3>
 
   <div class="interests-mobile-nav">
-    {% for interest in site.data.settings.interests %}
-        <span class="interest-button {% if forloop.first %}active-interest{% endif %}"></span>
+    {% for interest in cv_en.interests %}
+      <button type="button" class="interest-button {% if forloop.first %}active-interest{% endif %}" aria-label="{{ interest.name }}"></button>
     {% endfor %}
   </div>
 
   <div class="interests-belt">
-    {% for interest in site.data.settings.interests %}
+    {% for interest in cv_en.interests %}
+      {% assign interest_de = cv_de.interests[forloop.index0] %}
       <div class="interest-unit {% if forloop.first %}active-interest{% endif %}">
-
         <figure class="interest-face">
-          <img src="{{ site.github.url }}/assets/img/interests/{{ interest.avatar }}" alt="interest-face">
+          <div class="interest-symbol">{{ forloop.index }}</div>
           <figcaption>
-            <strong class="interest-name">{{ interest.name }}</strong>
-            <em class="interest-title">{{ interest.title }}</em>
+            <strong class="interest-name">
+              <span data-lang-content="en">{{ interest.name }}</span>
+              <span data-lang-content="de">{{ interest_de.name }}</span>
+            </strong>
+            <em class="interest-title">
+              <span data-lang-content="en">{{ interest.short }}</span>
+              <span data-lang-content="de">{{ interest_de.short }}</span>
+            </em>
           </figcaption>
         </figure>
 
         <div class="interest-content">
           <div class="interest-quote-mark">{% include icons/icon-quote-mark.html %}</div>
-          {{ interest.quote }}
+          <p data-lang-content="en">{{ interest.body }}</p>
+          <p data-lang-content="de">{{ interest_de.body }}</p>
         </div>
       </div>
     {% endfor %}
-
   </div>
 
   <div class="interest-controls">
-    <div class="interest-control-next">{% include icons/icon-next.html %}</div>
-    <div class="interest-control-prev">{% include icons/icon-prev.html %}</div>
+    <button type="button" class="interest-control-next" aria-label="Next interest">{% include icons/icon-next.html %}</button>
+    <button type="button" class="interest-control-prev" aria-label="Previous interest">{% include icons/icon-prev.html %}</button>
   </div>
 
   <div class="interests-logos">
-    {% for interest in site.data.settings.interests %}
-        <img class="interest-logo {% if forloop.first %}active-interest{% endif %}" src="{{ site.github.url }}/assets/img/interests/{{ interest.logo }}" align="{{ interest.logo }}">
+    {% for interest in cv_en.interests %}
+      <button type="button" class="interest-logo {% if forloop.first %}active-interest{% endif %}">
+        <span data-lang-content="en">{{ interest.name }}</span>
+        <span data-lang-content="de">{{ cv_de.interests[forloop.index0].name }}</span>
+      </button>
     {% endfor %}
   </div>
-
 </section>

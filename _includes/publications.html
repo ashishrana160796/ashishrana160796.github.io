@@ -1,0 +1,46 @@
+<section id="publications" class="section-publications">
+  <h3>
+    <span data-lang-content="en">Publications</span>
+    <span data-lang-content="de">Publikationen</span>
+  </h3>
+
+  <div class="section-intro">
+    <p data-lang-content="en">Recent and selected research from agentic memory, interpretable AI, reinforcement learning, information retrieval, and scientific AI.</p>
+    <p data-lang-content="de">Ausgewaehlte Forschung zu agentischem Gedaechtnis, interpretierbarer KI, Reinforcement Learning, Information Retrieval und wissenschaftlicher KI.</p>
+  </div>
+
+  <div class="publication-belt">
+    <div class="publication-grid-wrap">
+      <div class="publication-grid">
+        {% for paper in site.data.publications %}
+          {% if paper.featured %}
+            {% include publication-card.html paper=paper %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <details class="earlier-publications">
+        <summary>
+          <span data-lang-content="en">Earlier publications</span>
+          <span data-lang-content="de">Fruehere Publikationen</span>
+        </summary>
+        <div class="publication-grid publication-grid-earlier">
+          {% for paper in site.data.publications %}
+            {% unless paper.featured %}
+              {% include publication-card.html paper=paper %}
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </details>
+    </div>
+
+    <div class="publication-detail-wrap">
+      <div class="publication-detail">
+        <button type="button" class="publication-return" aria-label="Return to publications">{% include icons/icon-back.html %}</button>
+        {% for paper in site.data.publications %}
+          {% include publication-panel.html paper=paper %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

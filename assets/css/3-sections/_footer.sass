@@ -1,26 +1,32 @@
 footer
-  @extend %background-image
-  background-image: url(../img/#{$logo-path}), url(../img/#{$hero-path})
+  background: var(--surface-strong)
 
   .lockup
-    padding: 50px 30px
-    +clearfix
+    padding: 42px 30px
+    text-align: center
 
     .content-wrap
-      float: left
-      margin-left: 80px
+      float: none
+      margin-left: 0
 
       .copyright
-        margin: 0
+        margin: 18px 0 0
         text-transform: uppercase
         font-size: 12px
-        color: rgba(0,0,0,0.4)
+        color: var(--muted)
 
       a
-        @extend %small-bold
-        color: rgba(0,0,0,0.5)
-        display: inline-block
-        margin-right: 30px
+        color: var(--ink)
+        display: inline-flex
+        align-items: center
+        min-height: 38px
+        padding: 0 14px
+        border: 1px solid var(--line)
+        border-radius: 999px
+        margin: 5px
+        font-weight: 800
+        background: var(--page)
 
         &:hover
-          color: rgba(0,0,0,0.7)
+          color: var(--ink)
+          border-color: var(--accent-soft)

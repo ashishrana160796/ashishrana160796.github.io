@@ -1,0 +1,171 @@
+intro:
+  eyebrow: Ueberblick
+  title: Interessiert an Forschung und Engineering
+  headline: Ich entwickle interpretierbare, zuverlaessige KI-Systeme mit Forschungstiefe und Produktionsdisziplin.
+  body: >
+    Ich arbeite an agentischen LLMs, prototypenbasierter erklaerbarer KI, multimodalem Lernen und
+    skalierbaren Machine-Learning-Systemen. Meine aktuelle Forschungsrichtung verbindet Langzeitgedaechtnis
+    in agentischen LLMs, kausale Prototyp-Mechanismus-Erklaerungen und produktionsnahes LLM-Systemdesign.
+  ctas:
+    - label: Publikationen ansehen
+      url: "#publications"
+    - label: Zusammenarbeit starten
+      url: "#contact"
+profile:
+  heading: Forschungsprofil
+  body: >
+    Mein Forschungsinteresse liegt bei XAI, LLM-Systemen, prototypenbasierten Erklaerungen und agentischem
+    Gedaechtnis. Auf der Engineering-Seite interessieren mich reproduzierbare ML-Pipelines, vollstaendig
+    deployte Software mit Backend- und CI/CD-Disziplin sowie KI-Softwarepakete, die praktisch und verlaesslich
+    nutzbar sind.
+research_interests:
+  - Zuverlaessige agentische LLMs
+  - Interpretierbarkeit von KI
+  - Multimodales Repraesentationslernen
+languages:
+  - name: Englisch
+    level: C1
+    note: Professionelle Arbeitsfaehigkeit
+  - name: Deutsch
+    level: B1
+    note: Selbststaendige Sprachverwendung
+experience:
+  heading: Beruflicher Werdegang
+  roles:
+    - title: Research Engineer
+      organization: NEC Laboratories Europe (NLE)
+      location: Heidelberg, Deutschland
+      period: Jun 2025 - Maerz 2026
+      type: Vollzeit
+      collapsible: false
+      tags: [Langzeitgedaechtnis, Kausale Prototypen, Systemdesign, Software-Releases, Abschlussarbeitsbetreuung]
+      points:
+        - Forschung zu Langzeitgedaechtnis in agentischen LLMs und kausalen Erklaerungen durch Prototypen und Mechanismen.
+        - Entwicklung skalierbarer Echtzeit-LLM-Systeme fuer die Bearbeitung von Notrufen mit FastAPI und CI/CD.
+    - title: Research Associate
+      organization: NEC Laboratories Europe (NLE)
+      location: Heidelberg, Deutschland
+      period: Jan 2024 - Mai 2025
+      type: Vollzeit
+      collapsible: false
+      tags: [Prototypenbasiertes Lernen, Prototypenentwicklung, Softwareentwicklung]
+      points:
+        - Entwicklung interpretierbarer Deep-Learning-Varianten des Classification-by-Components-Ansatzes auf dem Stand der Technik.
+        - Entwicklung einer interpretierbaren Webanwendung fuer Gesundheitsassistenz mit GLVQ- und GTLVQ-Ansaetzen.
+    - title: Werkstudent
+      organization: trinamiX GmbH
+      location: Ludwigshafen, Deutschland
+      period: Apr 2023 - Dez 2023
+      type: Teilzeit
+      collapsible: true
+      tags: [PyTorch, Hydra, MLflow]
+      points:
+        - Entwicklung von Datenverarbeitung und Codeoptimierungen fuer eine CNN-basierte Deep-Learning-Pipeline.
+        - Benchmarking der Transfer-Learning-Performance von EfficientNet mit biometrischen Daten dynamischer Eingabegroesse.
+    - title: Werkstudent
+      organization: Institute for Enterprise Systems
+      location: Mannheim, Deutschland
+      period: Apr 2023 - Sep 2023
+      type: Teilzeit
+      collapsible: true
+      tags: [Zeitreihendaten, Transformer, Datenverarbeitung]
+      points:
+        - Entwicklung von Datenvorverarbeitung und Codeoptimierungen fuer die BERT-Systempipeline.
+        - Entwicklung von Architekturverbesserungen fuer Smart-Meter-Zeitreihendaten.
+    - title: Werkstudent
+      organization: FARO Technologies
+      location: Korntal-Muenchingen, Deutschland
+      period: Sep 2022 - Feb 2023
+      type: Teilzeit
+      collapsible: true
+      tags: [PyTorch, Open3D-ML, Synthetische Daten]
+      points:
+        - Durchfuehrung grossskaliger, hochaufloesender Punktwolkensegmentierung mit RandLA-Net.
+        - Feinabstimmung von RandLA-Net auf synthetisch erzeugten Daten und Benchmarking der Verbesserungen.
+    - title: Data-Science-Praktikant
+      organization: ZEW
+      location: Mannheim, Deutschland
+      period: Jun 2022 - Aug 2022
+      type: Vollzeit
+      collapsible: true
+      tags: [Selenium, Beautiful Soup, HuggingFace, PyTorch]
+      points:
+        - Entwicklung von Web-Scrapern fuer mehrsprachige Daten und Uebersetzungs-Wrappern zur Synchronisierung von Datensaetzen.
+        - Statistische Analyse von Fussballkompetenzen mit Difference-in-Differences-Modellen.
+    - title: Data Engineering Specialist
+      organization: GE Healthcare
+      location: Bengaluru, Indien
+      period: Aug 2019 - Sep 2021
+      type: Vollzeit
+      collapsible: false
+      tags: [Python, R, PL/pgSQL, AWS Redshift]
+      points:
+        - Entwicklung eines POC zur praediktiven Ausreissererkennung fuer MRT-Modalitaeten aus mehreren Sensordatenquellen.
+        - Entwicklung von Kennzahlen zur Maschinenauslastung fuer COVID-19-Belastungsanalysen.
+        - Entwicklung und Bereitstellung von PL/pgSQL-Ingestionsprozeduren im Terabyte-Massstab auf AWS Redshift.
+    - title: Data-Engineering-Praktikant
+      organization: American Express
+      location: Bengaluru, Indien
+      period: Jan 2019 - Jun 2019
+      type: Vollzeit
+      collapsible: true
+      tags: [Couchbase, Python, Grafana, Prometheus]
+      points:
+        - Entwicklung Prometheus- und Grafana-basierter Monitoring- und Alerting-Werkzeuge fuer Couchbase-DB-VMs.
+        - Konzeption, Entwicklung und Bereitstellung paralleler VM-Patching-Skripte zur vierfachen Reduzierung der Ausfallzeit.
+    - title: Software-Engineering-Praktikant
+      organization: GE Digital
+      location: Bengaluru, Indien
+      period: Jun 2018 - Jul 2018
+      type: Vollzeit
+      collapsible: true
+      tags: [REST, Java, SAML]
+      points:
+        - Ergaenzung eines SAML-Re-Authentifizierungsmoduls und Migration der Enovia-PLM-Codebasis auf eine REST-Architektur.
+        - Durchfuehrung einer Fallstudie zu Open-Source-Werkzeugen fuer statische Analyse auf der Enovia-Java-Codebasis.
+education:
+  heading: Ausbildung
+  entries:
+    - degree: M.Sc. Data Science
+      institution: University of Mannheim
+      location: Deutschland
+      period: 2021 - 2023
+      result: Note 2,4 (Gut)
+      conversion: Deutsche Notenskala; ungefaehr USA 3,1
+    - degree: B.E. Computer Engineering
+      institution: Thapar Institute of Engineering and Technology
+      location: Indien
+      period: 2015 - 2019
+      result: CGPA 9,51/10,00
+      conversion: Ungefaehr DE 1,3 und USA 3,8
+    - degree: 12. Klasse
+      institution: Army Public School, Meerut Cantt.
+      location: Uttar Pradesh, Indien
+      period: 2013 - 2014
+      result: 91%
+      conversion: ""
+    - degree: 10. Klasse
+      institution: Army Public School, Jalandhar Cantt.
+      location: Punjab, Indien
+      period: 2011 - 2012
+      result: GPA 9,8/10,0
+      conversion: ""
+projects:
+  - title: Reinforcement Learning for Self-driving Vehicles
+    venue: Manning liveProject
+    summary: Entwicklung eines praxisorientierten Projekts zur prototypischen Entwicklung von Agenten und Beitraege zum highway-env Open-Source-Paket.
+    link: https://github.com/ashishrana160796/prototyping-self-driving-agents
+  - title: Automating Couchbase Monitoring Integrations
+    venue: Couchbase Connect.ONLINE 2020
+    summary: Praesentation von Prometheus-, Couchbase-Exporter- und Grafana-Integrationen fuer Monitoring und praediktive Warnungen.
+    link: https://github.com/ashishrana160796/cautious-integration-analysis
+interests:
+  - name: Zuverlaessige agentische LLMs
+    short: Gedaechtnis, Sicherheit und Systemverhalten fuer langfristig laufende agentische KI.
+    body: Ich arbeite an Langzeitgedaechtnis, zerfallsgetriebener Aktivierung und skalierbaren LLM-Systemen fuer reale Einsatzbedingungen.
+  - name: Interpretierbarkeit von KI
+    short: Prototypenbasierte Erklaerungen, kausale Mechanismen und transparentes Modellverhalten.
+    body: Ich entwickle interpretierbare Systeme rund um Classification-by-Components, GLVQ/GTLVQ und prototypenspezifische Erklaerungen.
+  - name: Multimodales Repraesentationslernen
+    short: Nuetzliche Repraesentationen ueber Sprache, Vision, Zeitreihen und strukturierte Signale hinweg.
+    body: Meine Erfahrung umfasst CT-Bildanalyse, Zeitreihen-Transformer, Punktwolkensegmentierung, Information Retrieval und wissenschaftliche Claim-Verifikation.

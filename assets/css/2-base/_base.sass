@@ -1,77 +1,102 @@
 /*	Typography presets
   ------------------------------------	*/
 
-.gigantic, .huge, .large, .bigger, .big,
+html
+  --page: #ffffff
+  --surface: #f5f8fb
+  --surface-strong: #e5eaee
+  --ink: #222831
+  --muted: #66707a
+  --line: #d7e0e8
+  --accent: #333333
+  --accent-soft: #5bc0be
+  --accent-warm: #e07a5f
+  --shadow: 0 22px 70px rgba(20, 32, 43, 0.12)
+
+html[data-theme="dark"]
+  --page: #101418
+  --surface: #171d23
+  --surface-strong: #202832
+  --ink: #f5f8fb
+  --muted: #aeb8c2
+  --line: #34424f
+  --accent: #f5f8fb
+  --accent-soft: #5bc0be
+  --accent-warm: #f0a07f
+  --shadow: 0 22px 70px rgba(0, 0, 0, 0.32)
+
+html[data-lang="en"] [data-lang-content="de"],
+html[data-lang="de"] [data-lang-content="en"]
+  display: none !important
+
+*
+  +box-sizing(border-box)
+
+html
+  scroll-behavior: smooth
+
 h1, h2, h3, h4, h5, h6
-  color: $headlineColor
-  font-weight: bold
+  color: var(--ink)
+  font-weight: 700
+  letter-spacing: 0
 
-.gigantic
-  font-size: 110px
-  line-height: 1.09
-  letter-spacing: -2px
-
-.huge, h1
+h1
   font-size: 68px
-  line-height: 1.05
-  letter-spacing: -1px
+  line-height: 1.02
+  margin: 0 0 18px
 
-.large, h2
+h2
   font-size: 42px
   line-height: 1.14
 
-.bigger, h3
-  font-size: 26px
-  line-height: 1.38
+h3
+  @extend %small-bold
+  color: var(--accent)
+  text-align: center
+  padding: 96px 0 26px
 
-.big, h4
+h4
   font-size: 22px
-  line-height: 1.38
+  line-height: 1.32
 
-.small, small
-  font-size: 10px
-  line-height: 1.2
-
-
+h5
+  font-size: 17px
+  line-height: 1.35
+  margin: 0
 
 p
   margin: 0 0 20px 0
 
 em
-  font-style: italic
+  font-style: normal
 
 strong
-  font-weight: bold
+  font-weight: 700
 
 hr
-  border: solid #ddd
+  border: solid var(--line)
   border-width: 1px 0 0
   clear: both
   margin: 10px 0 30px
   height: 0
 
-
-
-/* Links
-  ------------------------------------	*/
 a
-  color: $accent
+  color: var(--accent)
   text-decoration: none
   outline: 0
+  +transition(color 180ms ease, border-color 180ms ease, background 180ms ease)
 
 a:hover, a:focus
-  color: lighten($accent, 20%)
+  color: var(--accent-soft)
 
-
-
-/* Selection colors (easy to forget)
-  ------------------------------------	*/
+button
+  font-family: inherit
 
 ::selection
-  background: $selectionColor
+  background: rgba(91, 192, 190, 0.32)
 
 ::-moz-selection
-  background: $selectionColor
+  background: rgba(91, 192, 190, 0.32)
 
 img::selection
   background: transparent
@@ -80,42 +105,151 @@ img::-moz-selection
   background: transparent
 
 body
-  -webkit-tap-highlight-color: $selectionColor
-
-
-
-/* Basic Styles
-  ------------------------------------	*/
-body
-  background: $documentBackgroundColor
-  font-size: 14px
-  line-height: 1.6
+  background: var(--page)
+  font-size: 15px
+  line-height: 1.7
   font-family: 'Open Sans', sans-serif
-  color: $textColor
+  color: var(--muted)
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
+  -webkit-tap-highlight-color: rgba(91, 192, 190, 0.25)
 
 svg
   +size(100%)
 
-h3
-  @extend %small-bold
-  color: $accent-light
-  text-align: center
-  padding: 100px 0 30px
+section
+  background: var(--page)
+  padding: 0 24px 96px
+
+section:nth-of-type(even)
+  background: var(--surface)
 
 fieldset
   padding: 0
   margin: 0
   border: none
 
+.section-intro
+  max-width: 720px
+  margin: 0 auto 42px
+  text-align: center
+  font-size: 18px
+  color: var(--muted)
+
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  min-height: 44px
+  padding: 0 18px
+  border: 1px solid var(--line)
+  border-radius: 999px
+  color: var(--ink)
+  background: rgba(255, 255, 255, 0.52)
+  font-weight: 700
+  cursor: pointer
+  text-align: center
+  overflow-wrap: anywhere
+  +transition(transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease)
+
+  &:hover, &:focus
+    border-color: var(--accent-soft)
+    color: var(--ink)
+    +transform(translateY(-1px))
+
+.button-primary
+  background: var(--accent)
+  border-color: var(--accent)
+  color: var(--page)
+
+  &:hover, &:focus
+    background: var(--accent-soft)
+    border-color: var(--accent-soft)
+    color: #071011
+
+.button-secondary
+  background: transparent
+
+.tag-list
+  +display(flex)
+  +flex-wrap(wrap)
+  gap: 8px
+
+  span
+    display: inline-flex
+    align-items: center
+    min-height: 28px
+    padding: 0 10px
+    border: 1px solid var(--line)
+    border-radius: 999px
+    color: var(--muted)
+    background: var(--surface)
+    font-size: 12px
+    font-weight: 700
+    overflow-wrap: anywhere
+
+.site-controls
+  position: fixed
+  top: 18px
+  right: 18px
+  z-index: 50
+  +display(flex)
+  gap: 8px
+
+.control-group
+  +display(flex)
+  gap: 4px
+  padding: 4px
+  border: 1px solid var(--line)
+  border-radius: 999px
+  background: rgba(255, 255, 255, 0.78)
+  backdrop-filter: blur(16px)
+
+html[data-theme="dark"] .control-group
+  background: rgba(16, 20, 24, 0.76)
+
+.control-button
+  min-width: 42px
+  height: 38px
+  border: 1px solid transparent
+  border-radius: 999px
+  color: var(--muted)
+  background: transparent
+  cursor: pointer
+  font-weight: 700
+
+  &.is-active, &:hover, &:focus
+    color: var(--ink)
+    border-color: var(--line)
+    background: var(--surface)
+
+.theme-toggle
+  border-color: var(--line)
+  background: var(--surface)
+
+.success-message
+  min-height: 70vh
+  padding: 160px 24px
+  text-align: center
+
+@media screen and (max-width: 720px)
+  h1
+    font-size: 48px
+
+  h3
+    padding: 66px 0 24px
+
+  section
+    padding-left: 18px
+    padding-right: 18px
+
+  .site-controls
+    position: absolute
+    left: 12px
+    right: 12px
+    top: 12px
+    +justify-content(flex-end)
+
 @media screen and (max-width: 480px)
-  h3
-    padding: 50px 0 50px
-
-section:nth-child(odd)
-  background: $bgcolor
-  padding-bottom: 100px
-
-  h3
-    color: darken($accent-light, 10%)
+  h1
+    font-size: 38px

@@ -1,0 +1,170 @@
+intro:
+  eyebrow: Overview
+  title: Interested in Research and Engineering
+  headline: Building interpretable, reliable AI systems with research depth and production discipline.
+  body: >
+    I work across agentic LLMs, prototype-based explainable AI, multimodal learning, and scalable
+    machine learning systems. My current research direction connects long-term memory in agentic LLMs,
+    causal prototype-mechanism explanations, and production-minded LLM system design.
+  ctas:
+    - label: View Publications
+      url: "#publications"
+    - label: Start Collaboration
+      url: "#contact"
+profile:
+  heading: Research profile
+  body: >
+    My research taste is centered on XAI, LLM systems, prototype-based explanations, and agentic memory.
+    On the engineering side, I care about reproducible ML pipelines, complete deployed software with
+    backend and CI/CD discipline, and AI software packages that are practical enough to run more than once.
+research_interests:
+  - Reliable Agentic LLMs
+  - AI Interpretability
+  - Multimodal Representation Learning
+languages:
+  - name: English
+    level: C1
+    note: Professional working proficiency
+  - name: German
+    level: B1
+    note: Independent user
+experience:
+  heading: Professional Timeline
+  roles:
+    - title: Research Engineer
+      organization: NEC Laboratories Europe (NLE)
+      location: Heidelberg, Germany
+      period: Jun 2025 - Mar 2026
+      type: Full-Time
+      collapsible: false
+      tags: [Long-term memory, Causal prototypes, System design, Software releases, Thesis supervision]
+      points:
+        - Researched long-term memory in agentic LLMs and causal prototype-mechanism explanations.
+        - Developed scalable real-time LLM systems for emergency call handling with FastAPI and CI/CD.
+    - title: Research Associate
+      organization: NEC Laboratories Europe (NLE)
+      location: Heidelberg, Germany
+      period: Jan 2024 - May 2025
+      type: Full-Time
+      collapsible: false
+      tags: [Prototype-based learning, Prototype building, Software development]
+      points:
+        - Built state-of-the-art interpretable deep variants of the Classification-by-Components approach.
+        - Developed an interpretable health assistant web application with GLVQ and GTLVQ approaches.
+    - title: Working Student
+      organization: trinamiX GmbH
+      location: Ludwigshafen, Germany
+      period: Apr 2023 - Dec 2023
+      type: Part-Time
+      collapsible: true
+      tags: [PyTorch, Hydra, MLflow]
+      points:
+        - Developed data processing and code optimizations for a CNN-based deep learning pipeline.
+        - Benchmarked transfer learning performance of EfficientNet with dynamic input-size biometric data.
+    - title: Working Student
+      organization: Institute for Enterprise Systems
+      location: Mannheim, Germany
+      period: Apr 2023 - Sep 2023
+      type: Part-Time
+      collapsible: true
+      tags: [Time-series data, Transformers, Data processing]
+      points:
+        - Built data preprocessing and pipeline code optimizations for the BERT system pipeline.
+        - Developed architecture improvements for smart meter time-series data.
+    - title: Working Student
+      organization: FARO Technologies
+      location: Korntal-Muenchingen, Germany
+      period: Sep 2022 - Feb 2023
+      type: Part-Time
+      collapsible: true
+      tags: [PyTorch, Open3D-ML, Synthetic data generation]
+      points:
+        - Conducted large-scale high-fidelity point cloud segmentation with RandLA-Net.
+        - Finetuned RandLA-Net on synthetically generated data and benchmarked the improvements.
+    - title: Data Science Intern
+      organization: ZEW
+      location: Mannheim, Germany
+      period: Jun 2022 - Aug 2022
+      type: Full-Time
+      collapsible: true
+      tags: [Selenium, Beautiful Soup, HuggingFace, PyTorch]
+      points:
+        - Developed web scrapers for multilingual data and translator wrappers for syncing datasets.
+        - Conducted football competency statistical analysis with Difference-in-Differences models.
+    - title: Data Engineering Specialist
+      organization: GE Healthcare
+      location: Bengaluru, India
+      period: Aug 2019 - Sep 2021
+      type: Full-Time
+      collapsible: false
+      tags: [Python, R, PL/pgSQL, AWS Redshift]
+      points:
+        - Developed a predictive outlier detection proof of concept for MRI modality sensor data.
+        - Built machine utilization metrics to measure extra healthcare system load for COVID-19 patients.
+        - Developed and deployed terabyte-scale PL/pgSQL ingestion procedures on AWS Redshift.
+    - title: Data Engineering Intern
+      organization: American Express
+      location: Bengaluru, India
+      period: Jan 2019 - Jun 2019
+      type: Full-Time
+      collapsible: true
+      tags: [Couchbase, Python, Grafana, Prometheus]
+      points:
+        - Developed Prometheus and Grafana based monitoring and alerting tools for Couchbase DB VMs.
+        - Designed, developed, and deployed parallel VM patching scripts to reduce downtime by four times.
+    - title: Software Engineering Intern
+      organization: GE Digital
+      location: Bengaluru, India
+      period: Jun 2018 - Jul 2018
+      type: Full-Time
+      collapsible: true
+      tags: [REST, Java, SAML]
+      points:
+        - Added a SAML re-authentication module and migrated the Enovia PLM codebase to REST architecture.
+        - Conducted a case study of open-source static analysis tools on the Enovia Java codebase.
+education:
+  heading: Education
+  entries:
+    - degree: M.Sc. Data Science
+      institution: University of Mannheim
+      location: Germany
+      period: 2021 - 2023
+      result: GPA 2.4 (Good)
+      conversion: German scale; approximately USA 3.1
+    - degree: B.E. Computer Engineering
+      institution: Thapar Institute of Engineering and Technology
+      location: India
+      period: 2015 - 2019
+      result: CGPA 9.51/10.00
+      conversion: Approximately DE 1.3 and USA 3.8
+    - degree: 12th Grade
+      institution: Army Public School, Meerut Cantt.
+      location: Uttar Pradesh, India
+      period: 2013 - 2014
+      result: 91%
+      conversion: ""
+    - degree: 10th Grade
+      institution: Army Public School, Jalandhar Cantt.
+      location: Punjab, India
+      period: 2011 - 2012
+      result: GPA 9.8/10.0
+      conversion: ""
+projects:
+  - title: Reinforcement Learning for Self-driving Vehicles
+    venue: Manning liveProject
+    summary: Developed an agent prototyping hands-on project and contributed to the highway-env open-source package.
+    link: https://github.com/ashishrana160796/prototyping-self-driving-agents
+  - title: Automating Couchbase Monitoring Integrations
+    venue: Couchbase Connect.ONLINE 2020
+    summary: Presented Prometheus, Couchbase Exporter, and Grafana monitoring integrations for predictive alerts.
+    link: https://github.com/ashishrana160796/cautious-integration-analysis
+interests:
+  - name: Reliable Agentic LLMs
+    short: Memory, safety, and system behavior for long-running agentic AI.
+    body: I work on long-term memory, decay-driven activation, and scalable LLM systems that remain useful under real operational constraints.
+  - name: AI Interpretability
+    short: Prototype-based explanations, causal mechanisms, and transparent model behavior.
+    body: I build interpretable systems around Classification-by-Components, GLVQ/GTLVQ, and prototype-specific explanations for high-stakes domains.
+  - name: Multimodal Representation Learning
+    short: Learning useful representations across language, vision, time-series, and structured signals.
+    body: My experience spans CT image analysis, time-series transformers, point-cloud segmentation, information retrieval, and scientific claim verification.

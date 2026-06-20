@@ -1,0 +1,21 @@
+{% assign cv_en = site.data.cven %}
+{% assign cv_de = site.data.cvde %}
+
+<section id="education" class="section-education">
+  <h3>
+    <span data-lang-content="en">Education</span>
+    <span data-lang-content="de">Ausbildung</span>
+  </h3>
+
+  <div class="education-grid" data-lang-content="en">
+    {% for item in cv_en.education.entries %}
+      {% include education-card.html item=item %}
+    {% endfor %}
+  </div>
+
+  <div class="education-grid" data-lang-content="de">
+    {% for item in cv_de.education.entries %}
+      {% include education-card.html item=item %}
+    {% endfor %}
+  </div>
+</section>

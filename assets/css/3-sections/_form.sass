@@ -1,45 +1,36 @@
 form
-  max-width: 450px
+  max-width: 500px
   margin: 0 auto 100px
   padding: 0 20px
 
   input, textarea
-    border: 3px solid $accent
+    border: 2px solid var(--line)
+    border-radius: 8px
     width: 100%
     +box-sizing(border-box)
-    padding: 10px
+    padding: 11px
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
     font-size: 16px
+    background: var(--page)
+    color: var(--ink)
 
     &:focus
       outline: none
-      border-color: $accent-light
+      border-color: var(--accent-soft)
 
   textarea
     height: 10em
-    resize: none
+    resize: vertical
+
+  .hidden-field
+    display: none
 
   .submit-wrap
     text-align: right
 
-  [type="submit"]
-    background: $accent
-    color: white
-    font-size: 18px
-    text-transform: uppercase
-    width: 33%
-
-    &:hover
-      background: $accent-light
-
-
-
-
-
   .contact-info-group
-
     label
       width: 50%
       float: left
@@ -57,11 +48,13 @@ form
 
     span
       display: block
+      color: var(--ink)
+      font-weight: 700
+      margin-bottom: 6px
 
 @media (max-width: 541px)
   form
     .contact-info-group
-
       label
         width: 100%
 
@@ -71,5 +64,5 @@ form
         &:nth-child(2)
           padding: 0
 
-    [type="submit"]
+    .submit-wrap .button
       width: 100%

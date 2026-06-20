@@ -1,0 +1,21 @@
+{% assign cv_en = site.data.cven %}
+{% assign cv_de = site.data.cvde %}
+
+<section id="experience" class="section-experience">
+  <h3>
+    <span data-lang-content="en">Experience</span>
+    <span data-lang-content="de">Erfahrung</span>
+  </h3>
+
+  <div class="section-intro">
+    <p data-lang-content="en">A CV-first view of research engineering, data science, and software systems work.</p>
+    <p data-lang-content="de">Ein CV-orientierter Blick auf Research Engineering, Data Science und Software-Systeme.</p>
+  </div>
+
+  <div data-lang-content="en">
+    {% include experience-list.html cv=cv_en %}
+  </div>
+  <div data-lang-content="de">
+    {% include experience-list.html cv=cv_de %}
+  </div>
+</section>

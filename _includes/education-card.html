@@ -1,0 +1,9 @@
+<article class="education-card">
+  <span class="education-period">{{ include.item.period }}</span>
+  <h4>{{ include.item.degree }}</h4>
+  <p>{{ include.item.institution }} · {{ include.item.location }}</p>
+  <strong>{{ include.item.result }}</strong>
+  {% if include.item.conversion %}
+    <em>{{ include.item.conversion }}</em>
+  {% endif %}
+</article>
