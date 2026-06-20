@@ -41,6 +41,8 @@ After editing a data file, rebuild or restart the local Jekyll server. The HTML 
 
 ## Deployment
 
+The production Netlify site is available at [http://ashishrana160796-github-io.netlify.app/](http://ashishrana160796-github-io.netlify.app/). Netlify may serve it over HTTPS automatically.
+
 GitHub Pages is configured to deploy from the `master` branch and repository root. Push changes to `master`, then wait for GitHub Pages to rebuild.
 
 The contact form markup is Netlify Forms compatible, but GitHub Pages does not process form submissions. To enable email routing, deploy this repo on Netlify and configure the `collaboration` form notification there.
