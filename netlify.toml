@@ -2,6 +2,9 @@
   publish = "_site"
   command = "bundle exec jekyll build"
 
+[build.environment]
+  RUBY_VERSION = "2.7.8"
+
 [[headers]]
   for = "/*"
   [headers.values]
