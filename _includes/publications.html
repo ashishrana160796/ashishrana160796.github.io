@@ -5,8 +5,8 @@
   </h3>
 
   <div class="section-intro">
-    <p data-lang-content="en">Recent and selected research from agentic memory, interpretable AI, reinforcement learning, information retrieval, and scientific AI.</p>
-    <p data-lang-content="de">Ausgewaehlte Forschung zu agentischem Gedaechtnis, interpretierbarer KI, Reinforcement Learning, Information Retrieval und wissenschaftlicher KI.</p>
+    <p data-lang-content="en">Selected Research From Agentic Memory, Interpretable AI, Reinforcement Learning, Information Retrieval, and Scientific AI.</p>
+    <p data-lang-content="de">Ausgewaehlte Forschung zu Agentischem Gedaechtnis, Interpretierbarer KI, Reinforcement Learning, Information Retrieval und Wissenschaftlicher KI.</p>
   </div>
 
   <div class="publication-belt">
@@ -19,12 +19,20 @@
         {% endfor %}
       </div>
 
+      {% assign earlier_count = 0 %}
+      {% for paper in site.data.publications %}
+        {% unless paper.featured %}
+          {% assign earlier_count = earlier_count | plus: 1 %}
+        {% endunless %}
+      {% endfor %}
+      {% assign earlier_remainder = earlier_count | modulo: 3 %}
+
       <details class="earlier-publications">
         <summary>
           <span data-lang-content="en">Earlier publications</span>
           <span data-lang-content="de">Fruehere Publikationen</span>
         </summary>
-        <div class="publication-grid publication-grid-earlier">
+        <div class="publication-grid publication-grid-earlier{% if earlier_remainder == 2 %} is-partial-row-2{% elsif earlier_remainder == 1 %} is-partial-row-1{% endif %}">
           {% for paper in site.data.publications %}
             {% unless paper.featured %}
               {% include publication-card.html paper=paper %}

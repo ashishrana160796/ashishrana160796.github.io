@@ -24,10 +24,11 @@ research_interests:
 languages:
   - name: English
     level: C1
-    note: Professional working proficiency
+    note: Professional Working Proficiency
   - name: German
     level: B1
-    note: Independent user
+    note: TELC Exam Certification
+    note_extra: "*B2/C1 Levels in Progress"
 experience:
   heading: Professional Timeline
   roles:

@@ -37,7 +37,12 @@
           <div class="language-row">
             <strong>{{ language.name }}</strong>
             <span>{{ language.level }}</span>
-            <em>{{ language.note }}</em>
+            <em>
+              {{ language.note }}
+              {% if language.note_extra %}
+                <br><span class="language-note-extra">{{ language.note_extra }}</span>
+              {% endif %}
+            </em>
           </div>
         {% endfor %}
       </div>
@@ -46,7 +51,12 @@
           <div class="language-row">
             <strong>{{ language.name }}</strong>
             <span>{{ language.level }}</span>
-            <em>{{ language.note }}</em>
+            <em>
+              {{ language.note }}
+              {% if language.note_extra %}
+                <br><span class="language-note-extra">{{ language.note_extra }}</span>
+              {% endif %}
+            </em>
           </div>
         {% endfor %}
       </div>

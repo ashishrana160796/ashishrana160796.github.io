@@ -28,7 +28,8 @@ languages:
     note: Professionelle Arbeitsfaehigkeit
   - name: Deutsch
     level: B1
-    note: Selbststaendige Sprachverwendung
+    note: TELC-Pruefungszertifizierung
+    note_extra: "*B2/C1-Niveaus in Bearbeitung"
 experience:
   heading: Beruflicher Werdegang
   roles:
