@@ -37,6 +37,7 @@ languages:
 experience:
   heading: Professional Timeline
   summary:
+    relationship: includes
     total:
       duration: 4 Years
       label: Industry Experience

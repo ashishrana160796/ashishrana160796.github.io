@@ -38,6 +38,7 @@ languages:
 experience:
   heading: Beruflicher Werdegang
   summary:
+    relationship: davon
     total:
       duration: 4 Jahre
       label: Industrieerfahrung

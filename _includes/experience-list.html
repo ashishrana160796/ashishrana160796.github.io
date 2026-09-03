@@ -1,21 +1,26 @@
 <div class="experience-group">
   <h4>{{ include.cv.experience.heading }}</h4>
-  <ol class="experience-hierarchy" aria-label="{{ include.cv.experience.summary.total.duration }} {{ include.cv.experience.summary.total.label }}; {{ include.cv.experience.summary.research.duration }} {{ include.cv.experience.summary.research.label }}">
-    <li class="experience-summary-card experience-summary-total">
+  <div class="experience-hierarchy" role="group" aria-label="{{ include.cv.experience.summary.total.duration }} {{ include.cv.experience.summary.total.label }}; {{ include.cv.experience.summary.relationship }} {{ include.cv.experience.summary.research.duration }} {{ include.cv.experience.summary.research.label }}; = {% for specialty in include.cv.experience.summary.research.specialties %}{{ specialty.duration }} {{ specialty.label }}{% unless forloop.last %} + {% endunless %}{% endfor %}">
+    <div class="experience-summary-card experience-summary-total">
       <strong>{{ include.cv.experience.summary.total.duration }}</strong>
       <span>{{ include.cv.experience.summary.total.label }}</span>
-    </li>
-    <li class="experience-summary-card experience-summary-research">
+    </div>
+    <span class="experience-operator experience-operator-word" aria-hidden="true">{{ include.cv.experience.summary.relationship }}</span>
+    <div class="experience-summary-card experience-summary-research">
       <strong>{{ include.cv.experience.summary.research.duration }}</strong>
       <span>{{ include.cv.experience.summary.research.label }}</span>
-    </li>
+    </div>
+    <span class="experience-operator" aria-hidden="true">=</span>
     {% for specialty in include.cv.experience.summary.research.specialties %}
-      <li class="experience-summary-card experience-summary-specialty">
+      <div class="experience-summary-card experience-summary-specialty">
         <strong>{{ specialty.duration }}</strong>
         <span>{{ specialty.label }}</span>
-      </li>
+      </div>
+      {% unless forloop.last %}
+        <span class="experience-operator" aria-hidden="true">+</span>
+      {% endunless %}
     {% endfor %}
-  </ol>
+  </div>
   <div class="timeline">
     {% for role in include.cv.experience.roles %}
       <article class="timeline-item {% if role.collapsible %}timeline-item-collapsible{% endif %}">

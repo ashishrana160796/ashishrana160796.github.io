@@ -53,7 +53,7 @@
   title: "GOV-REK: Governed Reward Engineering Kernels for Designing Robust Multi-Agent Reinforcement Learning Systems"
   authors: "Rana, A.; Oesterle, M.; Brinkmann, J."
   year: 2024
-  venue: AAMAS 2024
+  venue: International Conference on Autonomous Agents and Multi-Agent Systems, AAMAS 2024
   status_or_award: Extended abstract
   summary_en: Used reward distribution priors and Hyperband to engineer sparse multi-agent rewards efficiently.
   summary_de: Nutzung von Priors fuer Belohnungsverteilungen und Hyperband zur effizienten Entwicklung von Belohnungen in duenn belohnten Multi-Agenten-Systemen.
@@ -115,7 +115,7 @@
   title: "Building safer autonomous agents by leveraging risky driving behavior knowledge"
   authors: "Rana, A.; Malhi, A."
   year: 2021
-  venue: International Conference on Communications, Computing, Cybersecurity, and Informatics (CCCI) 2021
+  venue: International Conference on Communications, Computing, Cybersecurity, and Informatics, CCCI 2021
   status_or_award: Informatics Best Paper Award
   summary_en: Estimated causal agent performance improvements by using collision scenario information with causal experiment design.
   summary_de: Kausale Bewertung von Agentenleistungsverbesserungen durch Nutzung von Kollisionsszenarien in einem kausalen Versuchsdesign.

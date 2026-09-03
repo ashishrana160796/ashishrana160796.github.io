@@ -13,12 +13,11 @@
   margin: 0 0 34px
   padding: 0
   +display(grid)
-  grid-template-columns: repeat(4, minmax(0, 1fr))
-  gap: 12px
-  list-style: none
+  grid-template-columns: minmax(190px, 1.1fr) max-content minmax(195px, 1.1fr) max-content minmax(160px, 0.9fr) max-content minmax(160px, 0.9fr)
+  +align-items(stretch)
+  gap: 7px
 
 .experience-summary-card
-  position: relative
   min-width: 0
   min-height: 64px
   +display(flex)
@@ -28,15 +27,6 @@
   border: 1px solid var(--line)
   border-radius: 8px
   background: var(--page)
-
-  &:not(:last-child):after
-    content: ''
-    +position(absolute, 50% -8px null null)
-    z-index: 2
-    +size(7px)
-    border: solid var(--muted)
-    border-width: 2px 2px 0 0
-    +transform(translateY(-50%) rotate(45deg))
 
   strong
     flex: 0 0 auto
@@ -75,6 +65,23 @@ html[data-theme="dark"] .experience-summary-specialty:last-child
   border-color: rgba(240, 160, 127, 0.56)
   background: rgba(240, 160, 127, 0.12)
 
+.experience-operator
+  min-width: 24px
+  +display(flex)
+  +align-items(center)
+  +justify-content(center)
+  color: var(--ink)
+  font-size: 22px
+  font-weight: 800
+
+.experience-operator-word
+  min-width: auto
+  padding: 0 3px
+  color: var(--muted)
+  font-size: 11px
+  letter-spacing: 0.04em
+  text-transform: uppercase
+
 .timeline
   border-left: 2px solid var(--line)
   margin-left: 160px
@@ -91,7 +98,7 @@ html[data-theme="dark"] .experience-summary-specialty:last-child
     background: var(--accent-soft)
 
 .timeline-date
-  +position(absolute, 0 null null -190px)
+  +position(absolute, 0 null null -160px)
   width: 140px
   color: var(--muted)
   font-size: 13px
@@ -156,7 +163,7 @@ html[data-theme="dark"] .experience-summary-specialty:last-child
 
 @media (max-width: 760px)
   .experience-hierarchy
-    grid-template-columns: repeat(4, minmax(230px, 1fr))
+    grid-template-columns: 230px max-content 230px max-content 210px max-content 210px
     margin-bottom: 34px
     padding-bottom: 10px
     overflow-x: auto
