@@ -26,12 +26,29 @@ languages:
   - name: Englisch
     level: C1
     note: Professionelle Arbeitsfaehigkeit
+    level_index: 5
+    progress_label: Englischkenntnisse auf C1-Niveau
   - name: Deutsch
-    level: B1
-    note: TELC-Pruefungszertifizierung
-    note_extra: "*B2/C1-Niveaus in Bearbeitung"
+    level: B2
+    note: TELC-B2-Zertifizierung
+    note_extra: C1 in Vorbereitung
+    level_index: 4
+    next_level_index: 5
+    progress_label: Deutschkenntnisse auf B2-Niveau; C1 in Vorbereitung
 experience:
   heading: Beruflicher Werdegang
+  summary:
+    total:
+      duration: 4 Jahre
+      label: Industrieerfahrung
+    research:
+      duration: 2 Jahre
+      label: Industrieforschung
+      specialties:
+        - duration: 1 Jahr
+          label: Erklaerbare KI (XAI)
+        - duration: 1 Jahr
+          label: Zuverlaessige LLMs
   roles:
     - title: Research Engineer
       organization: NEC Laboratories Europe (NLE)

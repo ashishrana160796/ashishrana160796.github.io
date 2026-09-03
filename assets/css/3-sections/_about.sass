@@ -70,7 +70,7 @@
   &:last-child
     border-bottom: 0
 
-  span
+  .language-level
     color: var(--accent-soft)
     font-weight: 800
 
@@ -80,9 +80,54 @@
     font-size: 13px
     line-height: 1.45
 
+  .language-progress
+    grid-column: 1 / -1
+    +display(grid)
+    grid-template-columns: repeat(5, minmax(28px, 1fr))
+    gap: 8px
+    margin: 7px 0 4px
+
+  .language-step
+    +display(flex)
+    +flex-direction(column)
+    +align-items(center)
+    gap: 5px
+
+    i
+      +size(13px)
+      display: block
+      border: 2px solid var(--line)
+      border-radius: 50%
+      background: transparent
+
+    small
+      color: var(--muted)
+      font-size: 9px
+      font-weight: 800
+      letter-spacing: 0.06em
+
+    &.is-complete
+      i
+        border-color: var(--accent)
+        background: var(--accent)
+
+      small
+        color: var(--ink)
+
+    &.is-progress
+      i
+        border-color: var(--accent-warm)
+        background: transparent
+        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.16)
+
+      small
+        color: var(--accent-warm)
+
   .language-note-extra
     display: inline-block
     margin-top: 2px
+    color: var(--accent-warm)
+    font-weight: 700
     font-style: italic
 
 @media screen and (max-width: 760px)

@@ -2,7 +2,12 @@
   <p class="paper-year">{{ include.paper.year }} · {{ include.paper.venue }}</p>
   <h4>{{ include.paper.title }}</h4>
   <p class="paper-authors">{{ include.paper.authors }}</p>
-  <p class="paper-status">{{ include.paper.status_or_award }}</p>
+  {% if include.paper.status_en %}
+    <p class="paper-status" data-lang-content="en">{{ include.paper.status_en }}</p>
+    <p class="paper-status" data-lang-content="de">{{ include.paper.status_de }}</p>
+  {% else %}
+    <p class="paper-status">{{ include.paper.status_or_award }}</p>
+  {% endif %}
   <p data-lang-content="en">{{ include.paper.summary_en }}</p>
   <p data-lang-content="de">{{ include.paper.summary_de }}</p>
   <div class="tag-list" data-lang-content="en">

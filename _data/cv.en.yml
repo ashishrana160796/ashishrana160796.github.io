@@ -25,12 +25,29 @@ languages:
   - name: English
     level: C1
     note: Professional Working Proficiency
+    level_index: 5
+    progress_label: "English proficiency: C1"
   - name: German
-    level: B1
-    note: TELC Exam Certification
-    note_extra: "*B2/C1 Levels in Progress"
+    level: B2
+    note: TELC B2 Certification
+    note_extra: C1 in Progress
+    level_index: 4
+    next_level_index: 5
+    progress_label: "German proficiency: B2 achieved, C1 in progress"
 experience:
   heading: Professional Timeline
+  summary:
+    total:
+      duration: 4 Years
+      label: Industry Experience
+    research:
+      duration: 2 Years
+      label: Industrial Research
+      specialties:
+        - duration: 1 Year
+          label: Explainable AI (XAI)
+        - duration: 1 Year
+          label: Reliable LLMs
   roles:
     - title: Research Engineer
       organization: NEC Laboratories Europe (NLE)

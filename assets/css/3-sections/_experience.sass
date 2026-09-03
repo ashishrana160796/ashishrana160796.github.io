@@ -8,6 +8,73 @@
     font-size: 20px
     font-weight: 800
 
+.experience-hierarchy,
+.experience-hierarchy ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+.experience-hierarchy
+  max-width: 720px
+  margin: 0 auto 42px
+
+  ol
+    position: relative
+    margin: 12px 0 0 34px
+    padding-left: 28px
+    border-left: 2px solid var(--line)
+
+  li
+    position: relative
+
+  ol > li:before
+    content: ''
+    +position(absolute, 27px null null -28px)
+    width: 28px
+    border-top: 2px solid var(--line)
+
+.experience-summary-card
+  +display(grid)
+  grid-template-columns: minmax(90px, auto) 1fr
+  +align-items(center)
+  gap: 16px
+  padding: 14px 18px
+  border: 1px solid var(--line)
+  border-radius: 8px
+  background: var(--page)
+
+  strong
+    color: var(--accent)
+    font-size: 18px
+
+  span
+    color: var(--ink)
+    font-weight: 800
+
+.experience-summary-total
+  border-color: rgba(91, 192, 190, 0.5)
+  background: rgba(91, 192, 190, 0.08)
+
+.experience-summary-research
+  border-left: 4px solid var(--accent)
+
+.experience-specialties
+  +display(grid)
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 10px
+
+.experience-summary-specialty
+  height: 100%
+  grid-template-columns: 72px 1fr
+  padding: 11px 14px
+  background: var(--surface)
+
+  strong
+    font-size: 15px
+
+  span
+    font-size: 13px
+
 .timeline
   border-left: 2px solid var(--line)
   margin-left: 160px
@@ -88,6 +155,25 @@
   margin: 4px 0 0
 
 @media (max-width: 760px)
+  .experience-hierarchy
+    margin-bottom: 34px
+
+    ol
+      margin-left: 14px
+      padding-left: 18px
+
+    ol > li:before
+      left: -18px
+      width: 18px
+
+  .experience-specialties
+    grid-template-columns: 1fr
+
+  .experience-summary-card,
+  .experience-summary-specialty
+    grid-template-columns: 78px 1fr
+    gap: 12px
+
   .timeline
     margin-left: 0
 

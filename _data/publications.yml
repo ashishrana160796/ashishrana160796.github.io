@@ -2,8 +2,9 @@
   title: "Oblivion: Self-Adaptive Agentic Memory Control through Decay-Driven Activation"
   authors: "Rana, A.; Hung, C.C.; Sun, Q.; Kunkel, J.M.; Lawrence, C."
   year: 2026
-  venue: arXiv preprint
-  status_or_award: Pre-print available
+  venue: EMNLP 2026 Main Conference
+  status_en: Accepted
+  status_de: Angenommen
   summary_en: Built a cognitively inspired memory-control framework that casts forgetting as decay-driven reductions in accessibility, not explicit deletion.
   summary_de: Entwicklung eines kognitiv inspirierten Frameworks zur Gedaechtnissteuerung, das Vergessen als zerfallsbedingte Verringerung der Zugaenglichkeit auffasst.
   tags_en: [Agentic memory, Long-term memory, Memory management]

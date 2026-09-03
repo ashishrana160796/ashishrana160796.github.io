@@ -32,11 +32,20 @@
         <span data-lang-content="en">Languages</span>
         <span data-lang-content="de">Sprachen</span>
       </h4>
+      {% assign cefr_levels = "A1,A2,B1,B2,C1" | split: "," %}
       <div data-lang-content="en">
         {% for language in cv_en.languages %}
           <div class="language-row">
             <strong>{{ language.name }}</strong>
-            <span>{{ language.level }}</span>
+            <span class="language-level">{{ language.level }}</span>
+            <div class="language-progress" role="img" aria-label="{{ language.progress_label }}">
+              {% for cefr_level in cefr_levels %}
+                <span class="language-step{% if forloop.index <= language.level_index %} is-complete{% elsif forloop.index == language.next_level_index %} is-progress{% endif %}" aria-hidden="true">
+                  <i></i>
+                  <small>{{ cefr_level }}</small>
+                </span>
+              {% endfor %}
+            </div>
             <em>
               {{ language.note }}
               {% if language.note_extra %}
@@ -50,7 +59,15 @@
         {% for language in cv_de.languages %}
           <div class="language-row">
             <strong>{{ language.name }}</strong>
-            <span>{{ language.level }}</span>
+            <span class="language-level">{{ language.level }}</span>
+            <div class="language-progress" role="img" aria-label="{{ language.progress_label }}">
+              {% for cefr_level in cefr_levels %}
+                <span class="language-step{% if forloop.index <= language.level_index %} is-complete{% elsif forloop.index == language.next_level_index %} is-progress{% endif %}" aria-hidden="true">
+                  <i></i>
+                  <small>{{ cefr_level }}</small>
+                </span>
+              {% endfor %}
+            </div>
             <em>
               {{ language.note }}
               {% if language.note_extra %}
