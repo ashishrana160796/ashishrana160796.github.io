@@ -8,72 +8,72 @@
     font-size: 20px
     font-weight: 800
 
-.experience-hierarchy,
-.experience-hierarchy ol
-  margin: 0
+.experience-hierarchy
+  width: 100%
+  margin: 0 0 34px
   padding: 0
+  +display(grid)
+  grid-template-columns: repeat(4, minmax(0, 1fr))
+  gap: 12px
   list-style: none
 
-.experience-hierarchy
-  max-width: 720px
-  margin: 0 auto 42px
-
-  ol
-    position: relative
-    margin: 12px 0 0 34px
-    padding-left: 28px
-    border-left: 2px solid var(--line)
-
-  li
-    position: relative
-
-  ol > li:before
-    content: ''
-    +position(absolute, 27px null null -28px)
-    width: 28px
-    border-top: 2px solid var(--line)
-
 .experience-summary-card
-  +display(grid)
-  grid-template-columns: minmax(90px, auto) 1fr
+  position: relative
+  min-width: 0
+  min-height: 64px
+  +display(flex)
   +align-items(center)
-  gap: 16px
-  padding: 14px 18px
+  gap: 12px
+  padding: 12px 14px
   border: 1px solid var(--line)
   border-radius: 8px
   background: var(--page)
 
+  &:not(:last-child):after
+    content: ''
+    +position(absolute, 50% -8px null null)
+    z-index: 2
+    +size(7px)
+    border: solid var(--muted)
+    border-width: 2px 2px 0 0
+    +transform(translateY(-50%) rotate(45deg))
+
   strong
-    color: var(--accent)
-    font-size: 18px
+    flex: 0 0 auto
+    font-size: 16px
+    white-space: nowrap
 
   span
-    color: var(--ink)
     font-weight: 800
+    line-height: 1.3
 
 .experience-summary-total
-  border-color: rgba(91, 192, 190, 0.5)
-  background: rgba(91, 192, 190, 0.08)
+  border-color: var(--ink)
+  background: var(--ink)
+
+  strong,
+  span
+    color: var(--page)
 
 .experience-summary-research
-  border-left: 4px solid var(--accent)
+  border-color: var(--accent-soft)
+  background: var(--accent-soft)
 
-.experience-specialties
-  +display(grid)
-  grid-template-columns: repeat(2, minmax(0, 1fr))
-  gap: 10px
+  strong,
+  span
+    color: #071011
 
 .experience-summary-specialty
-  height: 100%
-  grid-template-columns: 72px 1fr
-  padding: 11px 14px
-  background: var(--surface)
+  border-color: rgba(91, 192, 190, 0.5)
+  background: rgba(91, 192, 190, 0.1)
 
-  strong
-    font-size: 15px
+.experience-summary-specialty:last-child
+  border-color: rgba(224, 122, 95, 0.5)
+  background: rgba(224, 122, 95, 0.1)
 
-  span
-    font-size: 13px
+html[data-theme="dark"] .experience-summary-specialty:last-child
+  border-color: rgba(240, 160, 127, 0.56)
+  background: rgba(240, 160, 127, 0.12)
 
 .timeline
   border-left: 2px solid var(--line)
@@ -156,23 +156,16 @@
 
 @media (max-width: 760px)
   .experience-hierarchy
+    grid-template-columns: repeat(4, minmax(230px, 1fr))
     margin-bottom: 34px
+    padding-bottom: 10px
+    overflow-x: auto
+    overscroll-behavior-x: contain
+    scroll-snap-type: x proximity
+    -webkit-overflow-scrolling: touch
 
-    ol
-      margin-left: 14px
-      padding-left: 18px
-
-    ol > li:before
-      left: -18px
-      width: 18px
-
-  .experience-specialties
-    grid-template-columns: 1fr
-
-  .experience-summary-card,
-  .experience-summary-specialty
-    grid-template-columns: 78px 1fr
-    gap: 12px
+  .experience-summary-card
+    scroll-snap-align: start
 
   .timeline
     margin-left: 0

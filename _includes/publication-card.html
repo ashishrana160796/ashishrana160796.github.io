@@ -1,11 +1,11 @@
 <button type="button" class="publication-card" data-publication-target="{{ include.paper.id }}">
   <span class="paper-year">{{ include.paper.year }}</span>
   <strong>{{ include.paper.title }}</strong>
-  <em>{{ include.paper.venue }}</em>
   {% if include.paper.status_en %}
-    <span class="paper-status" data-lang-content="en">{{ include.paper.status_en }}</span>
-    <span class="paper-status" data-lang-content="de">{{ include.paper.status_de }}</span>
+    <em class="paper-card-status" data-lang-content="en">{{ include.paper.status_en }}</em>
+    <em class="paper-card-status" data-lang-content="de">{{ include.paper.status_de }}</em>
   {% else %}
-    <span class="paper-status">{{ include.paper.status_or_award }}</span>
+    <em class="paper-card-status">{{ include.paper.status_or_award }}</em>
   {% endif %}
+  <span class="paper-card-venue">{{ include.paper.venue }}</span>
 </button>

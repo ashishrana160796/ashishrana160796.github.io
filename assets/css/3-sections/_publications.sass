@@ -54,7 +54,7 @@
     color: var(--page)
     +transform(translateY(-2px))
 
-    em, .paper-year, .paper-status
+    em, .paper-year, .paper-status, .paper-card-venue
       color: var(--page)
 
   strong
@@ -64,6 +64,15 @@
   em
     color: var(--muted)
     font-size: 13px
+
+  .paper-card-status
+    font-weight: 800
+
+.paper-card-venue
+  color: var(--accent-soft)
+  font-size: 12px
+  font-weight: 800
+  text-transform: uppercase
 
 .paper-year,
 .paper-status
@@ -154,6 +163,11 @@
 @media (max-width: 620px)
   .publication-grid
     grid-template-columns: 1fr
+
+  .publication-grid-earlier.is-partial-row-2,
+  .publication-grid-earlier.is-partial-row-1
+    grid-template-columns: 1fr
+    max-width: 1040px
 
   .publication-card
     min-height: 180px

@@ -1,30 +1,20 @@
 <div class="experience-group">
   <h4>{{ include.cv.experience.heading }}</h4>
-  <ol class="experience-hierarchy" aria-label="{{ include.cv.experience.summary.total.duration }} {{ include.cv.experience.summary.total.label }}">
-    <li>
-      <div class="experience-summary-card experience-summary-total">
-        <strong>{{ include.cv.experience.summary.total.duration }}</strong>
-        <span>{{ include.cv.experience.summary.total.label }}</span>
-      </div>
-      <ol>
-        <li>
-          <div class="experience-summary-card experience-summary-research">
-            <strong>{{ include.cv.experience.summary.research.duration }}</strong>
-            <span>{{ include.cv.experience.summary.research.label }}</span>
-          </div>
-          <ol class="experience-specialties">
-            {% for specialty in include.cv.experience.summary.research.specialties %}
-              <li>
-                <div class="experience-summary-card experience-summary-specialty">
-                  <strong>{{ specialty.duration }}</strong>
-                  <span>{{ specialty.label }}</span>
-                </div>
-              </li>
-            {% endfor %}
-          </ol>
-        </li>
-      </ol>
+  <ol class="experience-hierarchy" aria-label="{{ include.cv.experience.summary.total.duration }} {{ include.cv.experience.summary.total.label }}; {{ include.cv.experience.summary.research.duration }} {{ include.cv.experience.summary.research.label }}">
+    <li class="experience-summary-card experience-summary-total">
+      <strong>{{ include.cv.experience.summary.total.duration }}</strong>
+      <span>{{ include.cv.experience.summary.total.label }}</span>
     </li>
+    <li class="experience-summary-card experience-summary-research">
+      <strong>{{ include.cv.experience.summary.research.duration }}</strong>
+      <span>{{ include.cv.experience.summary.research.label }}</span>
+    </li>
+    {% for specialty in include.cv.experience.summary.research.specialties %}
+      <li class="experience-summary-card experience-summary-specialty">
+        <strong>{{ specialty.duration }}</strong>
+        <span>{{ specialty.label }}</span>
+      </li>
+    {% endfor %}
   </ol>
   <div class="timeline">
     {% for role in include.cv.experience.roles %}
